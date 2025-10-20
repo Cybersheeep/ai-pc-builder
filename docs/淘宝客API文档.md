@@ -13,7 +13,6 @@
 -`taobao.tbk.tpwd.convert` (32932) - 淘宝客-推广者-淘口令解析&转链
 -`taobao.tbk.dg.newuser.order.get` (33892) - 淘宝客-推广者-新用户订单明细查询
 -`taobao.tbk.dg.optimus.material` (33947) - 淘宝客-推广者-物料精选
--`taobao.tbk.dg.material.optional` (35896) - 淘宝客-推广者-物料搜索
 -`taobao.tbk.dg.newuser.order.sum` (36836) - 淘宝客-推广者-拉新活动对应数据查询
 -`taobao.tbk.relation.refund` (40121) - 淘宝客-推广者-售后退款订单查询
 -`taobao.tbk.dg.vegas.tlj.create` (40173) - 淘宝客-推广者-淘礼金创建
@@ -25,10 +24,7 @@
 -`taobao.tbk.jzf.convert` (43914) - 淘宝客-推广者-官办找福利页
 -`taobao.tbk.dg.reports.query.stat` (45095) - 淘宝客-推广者-媒体数据报表交换-汇总数据
 -`taobao.tbk.dg.reports.query.click` (45096) - 淘宝客-推广者-媒体数据交换报表点击维度
--`taobao.tbk.dg.media.kuaishou.monthly.report` (46760) - 淘宝客-推广者-快手月报(达人维度)
 -`taobao.tbk.dg.vegas.send.report` (47593) - 淘宝客-推广者-查询红包发放个数
--`taobao.tbk.dg.content.media.daily.report` (48026) - 淘宝客-推广者-微博日报(达人维度)
--`taobao.tbk.dg.content.media.monthly.report` (48027) - 淘宝客-推广者-微博月报(达人维度)
 -`taobao.tbk.activity.info.get` (48340) - 淘宝客-推广者-官方活动转链
 -`taobao.tbk.dg.optimus.promotion` (52700) - 淘宝客-推广者-权益物料精选
 -`taobao.tbk.dg.vegas.send.status` (52958) - 淘宝客-推广者-红包领取状态查询
@@ -74,7 +70,6 @@
 -`taobao.tbk.dg.eshare.link.convert` (72949) - 淘宝客-推广者-KA私域专享转链
 -`taobao.tbk.dg.image.ecognition.list.query` (73442) - 淘宝客【推广者】识图找优惠商品List
 -`taobao.tbk.dg.image.ecognition.page.query` (73468) - 淘宝客【推广者】识图找优惠h5
--`taobao.tbk.item.info.get` (24518) - 淘宝客-公用-淘宝客商品详情查询(简版)
 -`taobao.tbk.shop.recommend.get` (24522) - 淘宝客-公用-店铺关联推荐
 -`taobao.tbk.spread.get` (27832) - 淘宝客-公用-长链转短链
 -`taobao.tbk.item.click.extract` (28156) - 淘宝客-公用-链接解析出商品id
@@ -86,7 +81,6 @@
 -`taobao.tbk.sc.invitecode.get` (38046) - 淘宝客-公用-私域用户邀请码生成
 -`taobao.tbk.tbkinfo.get` (39869) - 淘宝客-公用-pid校验
 -`taobao.tbk.tpwd.parse` (42646) - 淘宝客-公用-淘口令解析出原链接
--`taobao.tbk.item.details.get` (46283) - 淘宝客-公用-淘宝客商品详情查询(详细版)
 -`taobao.tbk.item.details.upgrade.get` (64757) - 淘宝客-公用-淘宝客商品详情查询升级版（详细版）
 -`taobao.tbk.item.info.upgrade.get` (64763) - 淘宝客-公用-淘宝客商品详情查询升级版（简易版）
 -`taobao.tbk.itemid.ineffective.transform` (65372) - 淘宝客-公用-失效商品id转化
@@ -498,7 +492,8 @@ client.execute('taobao.tbk.shop.share.convert', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | results | TbkCoupon [] |  | data |
-| └ small_images | String
+| └ small_images | String
+
                                  [] | http://img4.tbcdn.cn/tfscom/i3/TB1vPdxHXXXXXbtXpXXXXXXXXXX_!!2-item_pic.png | 商品小图列表 |
 | └ coupon_total_count | Number | 5000 | 优惠券总量 |
 | └ commission_rate | String | 1.80 | 佣金比率(%) |
@@ -1054,7 +1049,8 @@ client.execute('taobao.tbk.tpwd.convert', {
 |---------|------|--------|------|
 | results | Results | data | data |
 | └ data | Data |  | data |
-| └ results | MapData
+| └ results | MapData
+
                                  [] |  | resultList |
 | └ register_time | Date | 2018-01-24 00:34:05 | 新注册时间，仅淘宝拉新适用 |
 | └ bind_time | Date | 2018-01-24 00:34:05 | 当前活动为淘宝拉新活动时，bind_time为新激活时间； 当前活动为支付宝拉新活动时，bind_time为绑定时间。 |
@@ -1076,7 +1072,8 @@ client.execute('taobao.tbk.tpwd.convert', {
 | └ activity_type | String | taobao | 活动类型，taobao-淘宝 alipay-支付宝 tmall-天猫 |
 | └ activity_id | String | 119013_2 | 活动id |
 | └ biz_date | String | 20180202 | 日期，格式为"20180202" |
-| └ orders | OrderData
+| └ orders | OrderData
+
                                  [] |  | 复购订单，仅适用于手淘拉新 |
 | └ commission | String | 9.15 | 预估佣金 |
 | └ confirm_receive_time | String | 20180204 | 收货时间 |
@@ -1222,7 +1219,8 @@ client.execute('taobao.tbk.dg.newuser.order.get', {
 |---------|------|--------|------|
 | result_list | MapData [] |  | resultList |
 | └ coupon_amount | Number | 40 | 优惠券（元） 若属于预售商品，该优惠券付尾款可用，付定金不可用 |
-| └ small_images | String
+| └ small_images | String
+
                                  [] |  | 商品信息-商品小图列表 |
 | └ shop_title | String | 魔黛娅内衣旗舰店 | 店铺信息-店铺名称 |
 | └ category_id | Number | 162201 | 商品信息-叶子类目id |
@@ -1255,7 +1253,8 @@ client.execute('taobao.tbk.dg.newuser.order.get', {
 | └ category_name | String | 牛仔裤 | 商品信息-叶子类目名称 |
 | └ white_image | String | https://img.alicdn.com/bao/uploaded/i4/745957850/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg | 商品信息-商品白底图 |
 | └ short_title | String | sss | 商品信息-商品短标题 |
-| └ word_list | WordMapData
+| └ word_list | WordMapData
+
                                  [] |  | 商品信息-商品关联词 |
 | └ url | String | https://uland.taobao.com/semm/tbxxxx | 链接-商品相关关联词落地页地址 |
 | └ word | String | 孕妇装 | 商品相关的关联词 |
@@ -1306,7 +1305,8 @@ client.execute('taobao.tbk.dg.newuser.order.get', {
 | └ ju_pre_show_start_time | String | 1582300799000 | 聚划算信息-商品预热结束时间（毫秒） |
 | └ favorites_info | FavoritesInfo |  | 选品库信息 |
 | └ total_count | Number | 100 | 选品库总数量 |
-| └ favorites_list | FavoritesDetail
+| └ favorites_list | FavoritesDetail
+
                                  [] |  | 选品库详细信息 |
 | └ favorites_id | Number | 12334 | 选品库id |
 | └ favorites_title | String | 测试选品库 | 选品库标题 |
@@ -1330,7 +1330,8 @@ client.execute('taobao.tbk.dg.newuser.order.get', {
 | └ bybt_info | BybtInfoDTO |  | 百亿补贴信息 |
 | └ bybt_brand_logo | String | //img.alicdn.com/bao/uploaded/i4/745957850/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg | 百亿补贴品牌logo |
 | └ bybt_pic_url | String | //img.alicdn.com/bao/uploaded/i4/745957850/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg | 百亿补贴白底图 |
-| └ bybt_item_tags | String
+| └ bybt_item_tags | String
+
                                  [] | ["https://gw.alicdn.com/tfs/TB1CvN50KH2gK0jSZJnXXaT1FXa-167-42.png?getAvatar=avatar","https://gw.alicdn.com/tfs/TB10rZqkCR26e4jSZFEXXbwuXXa-132-42.png?getAvatar=avatar"] | 百亿补贴商品特征标签，eg.今日发货、晚发补偿、限购一件等 |
 | └ bybt_coupon_amount | String | 10.00 | 百亿补贴专属券面额，仅限百亿补贴场景透出 |
 | └ bybt_show_price | String | 100.00 | 百亿补贴页面实时价 |
@@ -1346,7 +1347,8 @@ client.execute('taobao.tbk.dg.newuser.order.get', {
 | └ cpa_reward_type | String | 0 1 2 | 额外奖励活动类型，如果一个商品有多个奖励类型，返回结果使用空格分割，0=单单奖励(已失效)，1=超级单单奖励(已失效)，2=年货节单单奖励 |
 | └ cpa_reward_amount | String | 1.11 2.22 3.21 | 额外奖励活动金额，活动奖励金额的类型与cpa_reward_type字段对应，如果一个商品有多个奖励类型，返回结果使用空格分割 |
 | └ activity_id | String | 188 | 合作伙伴单单补ID，用作“年货节超级单单补”活动合作伙伴奖励统计依据 |
-| └ sp_campaign_list | SpCampaign
+| └ sp_campaign_list | SpCampaign
+
                                  [] |  | 定向计划集合 |
 | └ sp_cid | String | 123 | 定向计划活动ID |
 | └ sp_name | String | 定向计划活动1 | 定向计划名称 |
@@ -1591,422 +1593,6 @@ client.execute('taobao.tbk.dg.optimus.material', {
 | 1103 | 活动物料id无效 | 检查调用参数 |
 | 1201 | 口令类型无效 | 检查调用参数 |
 
----
-##taobao.tbk.dg.material.optional（淘宝客-推广者-物料搜索）
-
-### 请求参数
-
-| 参数名称 | 类型 | 是否必须 | 示例值 | 更多限制 | 描述 |
-|---------|------|---------|--------|---------|------|
-| start_dsr | Number | 可选 | 10 |  | 商品筛选(特定媒体支持)-店铺dsr评分。筛选大于等于当前设置的店铺dsr评分的商品0-50000之间 |
-| page_size | Number | 可选 | 20 | 默认值：20 | 页大小，默认20，1~100 |
-| page_no | Number | 可选 | 1 | 默认值：1 | 第几页，默认：１ |
-| platform | Number | 可选 | 1 | 默认值：1 | 链接形式：1：PC，2：无线，默认：１ |
-| end_tk_rate | Number | 可选 | 1234 |  | 商品筛选-淘客佣金比率上限。如：1234表示12.34% |
-| start_tk_rate | Number | 可选 | 1234 |  | 商品筛选-淘客佣金比率下限。如：1234表示12.34% |
-| end_price | Number | 可选 | 10 |  | 商品筛选-折扣价范围上限。单位：元 |
-| start_price | Number | 可选 | 10 |  | 商品筛选-折扣价范围下限。单位：元 |
-| is_overseas | Boolean | 可选 | false |  | 商品筛选-是否海外商品。true表示属于海外商品，false或不设置表示不限 |
-| is_tmall | Boolean | 可选 | false |  | 商品筛选-是否天猫商品。true表示属于天猫商品，false或不设置表示不限 |
-| sort | String | 可选 | tk_rate_des |  | 排序_des（降序），排序_asc（升序），销量（total_sales），淘客佣金比率（tk_rate）， 累计推广量（tk_total_sales），总支出佣金（tk_total_commi），价格（price），匹配分（match） |
-| itemloc | String | 可选 | 杭州 |  | 商品筛选-所在地 |
-| cat | String | 可选 | 16,18 |  | 商品筛选-后台类目ID。用,分割，最大10个，该ID可以通过taobao.itemcats.get接口获取到 |
-| q | String | 可选 | 女装 |  | 商品筛选-查询词 |
-| material_id | Number | 可选 | 2836 | 默认值：2836 | 不传时默认物料id=2836；如果直接对消费者投放，可使用官方个性化算法优化的搜索物料id=17004 |
-| has_coupon | Boolean | 可选 | false |  | 优惠券筛选-是否有优惠券。true表示该商品有优惠券，false或不设置表示不限 |
-| ip | String | 可选 | 13.2.33.4 |  | ip参数影响邮费获取，如果不传或者传入不准确，邮费无法精准提供 |
-| adzone_id | Number | 必须 | 12345678 |  | mm_xxx_xxx_12345678三段式的最后一段数字 |
-| need_free_shipment | Boolean | 可选 | true |  | 商品筛选-是否包邮。true表示包邮，false或不设置表示不限 |
-| need_prepay | Boolean | 可选 | true |  | 商品筛选-是否加入消费者保障。true表示加入，false或不设置表示不限 |
-| include_pay_rate_30 | Boolean | 可选 | true |  | 商品筛选(特定媒体支持)-成交转化是否高于行业均值。True表示大于等于，false或不设置表示不限 |
-| include_good_rate | Boolean | 可选 | true |  | 商品筛选-好评率是否高于行业均值。True表示大于等于，false或不设置表示不限 |
-| include_rfd_rate | Boolean | 可选 | true |  | 商品筛选(特定媒体支持)-退款率是否低于行业均值。True表示大于等于，false或不设置表示不限 |
-| npx_level | Number | 可选 | 2 | 默认值：1 | 商品筛选-牛皮癣程度。取值：1不限，2无，3轻微 |
-| device_encrypt | String | 可选 | MD5 |  | 智能匹配-设备号加密类型：MD5 |
-| device_value | String | 可选 | xxx |  | 智能匹配-设备号加密后的值（MD5加密需32位小写） |
-| device_type | String | 可选 | IMEI |  | 智能匹配-设备号类型：IMEI，或者IDFA，或者UTDID（UTDID不支持MD5加密），或者OAID |
-| end_ka_tk_rate | Number | 可选 | 1234 |  | 商品筛选-KA媒体淘客佣金比率上限。如：1234表示12.34% |
-| start_ka_tk_rate | Number | 可选 | 1234 |  | 商品筛选-KA媒体淘客佣金比率下限。如：1234表示12.34% |
-| lock_rate_end_time | Number | 可选 | 1567440000000 |  | 锁佣结束时间 |
-| lock_rate_start_time | Number | 可选 | 1567440000000 |  | 锁佣开始时间 |
-| longitude | String | 可选 | 121.473701 |  | 本地化业务入参-LBS信息-经度 |
-| latitude | String | 可选 | 31.230370 |  | 本地化业务入参-LBS信息-纬度 |
-| city_code | String | 可选 | 310000 |  | 本地化业务入参-LBS信息-国标城市码，仅支持单个请求，请求饿了么卡券物料时，该字段必填。 （详细城市ID见：https://mo.m.taobao.com/page_2020010315120200508） |
-| seller_ids | String | 可选 | 1,2,3,4 |  | 商家id，仅支持饿了么卡券商家ID，支持批量请求1-100以内，多个商家ID使用英文逗号分隔 |
-| special_id | String | 可选 | 2323 |  | 会员运营ID |
-| relation_id | String | 可选 | 3243 |  | 渠道关系ID，仅适用于渠道推广场景 |
-| page_result_key | String | 可选 | abcdef |  | 本地化业务入参-分页唯一标识，非首页的请求必传，值为上一页返回结果中的page_result_key字段值 |
-| ucrowd_id | Number | 可选 | 1 |  | 人群ID，仅适用于物料评估场景material_id=41377 |
-| ucrowd_rank_items | Ucrowdrankitems
-        						[] | 可选 |  | 最大列表长度：1000 | 物料评估-商品列表 |
-| get_topn_rate | Number | 可选 | 0 |  | 是否获取前N件佣金信息	0否，1是，其他值否 |
-| biz_scene_id | String | 可选 | 1 |  | 1-动态ID转链场景，2-消费者比价场景（不填默认为1） |
-| promotion_type | String | 可选 | 2 |  | 1-自购省，2-推广赚（代理模式专属ID，代理模式必填，非代理模式不用填写该字段） |
-
-### 响应参数
-
-| 参数名称 | 类型 | 示例值 | 描述 |
-|---------|------|--------|------|
-| total_results | Number | 1212 | 搜索到符合条件的结果总数 |
-| result_list | MapData [] |  | resultList |
-| └ coupon_start_time | String | 2017-10-29 | 优惠券信息-优惠券开始时间 |
-| └ coupon_end_time | String | 2017-10-29 | 优惠券信息-优惠券结束时间 |
-| └ info_dxjh | String | {"19013551":"2850","74510538":"2550"} | 商品信息-定向计划信息 |
-| └ tk_total_sales | String | 11 | 商品信息-淘客30天推广量 |
-| └ tk_total_commi | String | 323 | 商品信息-月支出佣金(该字段废弃，请勿再用) |
-| └ coupon_id | String | d62db1ab8d9546b1bf0ff49bda5fc33b | 优惠券信息-优惠券id |
-| └ num_iid | String | 556633720749 | 商品信息-宝贝id(该字段废弃，请勿再用) |
-| └ title | String | 毛呢阔腿裤港味复古女裤子秋冬九分裤萝卜裤显瘦高腰韩版2017新款 | 商品信息-商品标题 |
-| └ pict_url | String | https://img.alicdn.com/bao/uploaded/i4/745957850/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg | 商品信息-商品主图 |
-| └ small_images | String
-                                 [] | https://img.alicdn.com/i4/3077291146/TB2NA3poDnI8KJjSszgXXc8ApXa_!!3077291146.jpg | 商品信息-商品小图列表 |
-| └ reserve_price | String | 102.00 | 商品信息-商品一口价格 |
-| └ zk_final_price | String | 88.00 | 折扣价（元） 若属于预售商品，付定金时间内，折扣价=预售价 |
-| └ user_type | Number | 1 | 店铺信息-卖家类型。0表示集市，1表示天猫 |
-| └ provcity | String | 杭州 | 商品信息-宝贝所在地 |
-| └ item_url | String | https://item.taobao.com/item.htm?id=564591813536 | 链接-宝贝地址 |
-| └ include_mkt | String | false | 商品信息-是否包含营销计划 |
-| └ include_dxjh | String | false | 商品信息-是否包含定向计划 |
-| └ commission_rate | String | 1550表示15.5% | 商品信息-佣金比率。1550表示15.5% |
-| └ volume | Number | 123 | 商品信息-30天销量（饿了么卡券信息-总销量） |
-| └ seller_id | Number | 232332 | 店铺信息-卖家id |
-| └ shop_title | String | xx旗舰店 | 店铺信息-店铺名称 |
-| └ coupon_total_count | Number | 22323 | 优惠券信息-优惠券总量 |
-| └ coupon_remain_count | Number | 111 | 优惠券信息-优惠券剩余量 |
-| └ coupon_info | String | 满299元减20元 | 优惠券信息-优惠券满减信息 |
-| └ commission_type | String | MKT表示营销计划，SP表示定向计划，COMMON表示通用计划 | 商品信息-佣金类型。MKT表示营销计划，SP表示定向计划，COMMON表示通用计划 |
-| └ shop_dsr | Number | 13 | 店铺信息-店铺dsr评分 |
-| └ coupon_share_url | String | uland.xxx | 链接-宝贝+券二合一页面链接 |
-| └ url | String | s.click.xxx | 链接-宝贝推广链接 |
-| └ level_one_category_name | String | 女装 | 商品信息-一级类目名称 |
-| └ level_one_category_id | Number | 20 | 商品信息-一级类目ID |
-| └ category_name | String | 连衣裙 | 商品信息-叶子类目名称 |
-| └ category_id | Number | 162201 | 商品信息-叶子类目id |
-| └ short_title | String | xxsd | 商品信息-商品短标题 |
-| └ white_image | String | https://img.alicdn.com/bao/uploaded/i4/745957850/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg | 商品信息-商品白底图 |
-| └ oetime | String | 2018-08-21 11:23:43 | 拼团专用-拼团结束时间 |
-| └ ostime | String | 2018-08-21 11:23:43 | 拼团专用-拼团开始时间 |
-| └ jdd_num | Number | 10 | 拼团专用-拼团几人团 |
-| └ jdd_price | String | 5 | 拼团专用-拼团拼成价，单位元 |
-| └ uv_sum_pre_sale | Number | 23 | 预售专用-预售数量 |
-| └ x_id | String | uESS0mv8JvfJRMKlIgCD5At9VuHVBXoqBRihfQlo4ybLiKygRlqiN4eoxoZDfe38uSogWy6GB971jD2N8tLuuc | 链接-物料块id(测试中请勿使用) |
-| └ coupon_start_fee | String | 29.00 | 优惠券信息-优惠券起用门槛，满X元可用。如：满299元减20元 |
-| └ coupon_amount | String | 10.00 | 优惠券（元） 若属于预售商品，该优惠券付尾款可用，付定金不可用 |
-| └ item_description | String | 季凉被 全棉亲肤 | 商品信息-宝贝描述(推荐理由) |
-| └ nick | String | 旗舰店 | 店铺信息-卖家昵称 |
-| └ orig_price | String | 25 | 拼团专用-拼团一人价（原价)，单位元 |
-| └ total_stock | Number | 5555 | 拼团专用-拼团库存数量 |
-| └ sell_num | Number | 1111 | 拼团专用-拼团已售数量 |
-| └ stock | Number | 4444 | 拼团专用-拼团剩余库存 |
-| └ tmall_play_activity_info | String | 前n件x折 | 营销-天猫营销玩法 |
-| └ item_id | String | 5678899993 | 商品信息-宝贝id |
-| └ real_post_fee | String | 0.00 | 商品邮费 |
-| └ lock_rate | String | 1567440000000 | 锁住的佣金率 |
-| └ lock_rate_end_time | Number | 1567440000000 | 锁佣结束时间 |
-| └ lock_rate_start_time | Number | 1567440000000 | 锁佣开始时间 |
-| └ presale_discount_fee_text | String | 付定金立减5元 | 预售商品-优惠 |
-| └ presale_tail_end_time | Number | 1567440000000 | 预售商品-付尾款结束时间（毫秒） |
-| └ presale_tail_start_time | Number | 1567440000000 | 预售商品-付尾款开始时间（毫秒） |
-| └ presale_end_time | Number | 1567440000000 | 预售商品-付定金结束时间（毫秒） |
-| └ presale_start_time | Number | 1567440000000 | 预售商品-付定金开始时间（毫秒） |
-| └ presale_deposit | String | 100 | 预售商品-定金（元） |
-| └ ysyl_tlj_send_time | String | 2019-11-10 21:59:59 | 预售有礼-淘礼金发放时间 |
-| └ ysyl_commission_rate | String | 2030（表示20.3%） | 预售有礼-佣金比例（ 预售有礼活动享受的推广佣金比例，注：推广该活动有特殊分成规则，请详见：https://tbk.bbs.taobao.com/detail.html?appId=45301&postId=9334376 ） |
-| └ ysyl_tlj_face | String | 0.6 | 预售有礼-预估淘礼金（元） |
-| └ ysyl_click_url | String | https://uland.taobao.com/coupon/edetail?e=nqUNB1NOF3Bt3vqbdXnGloankzPYmeEFkgNrw6YHQf9pZTj41Orn8MwBAs06HAOzqQomYNedOiHDYPmqkFXqLR0HgBdG%2FDDL%2F1M%2FBw7Sf%2FesGXLf%2BqX4cbeC%2F2cR0p0NlWH0%2BknxpnCJJP%2FQkZSsyo1HvKjXo4uz&pid=mm_26381042_12970066_52864659&af=1 | 预售有礼-推广链接 |
-| └ ysyl_tlj_use_end_time | String | 2019-11-10 21:59:59 | 预售有礼-淘礼金使用结束时间 |
-| └ ysyl_tlj_use_start_time | String | 2019-11-10 21:59:59 | 预售有礼-淘礼金使用开始时间 |
-| └ sale_begin_time | String | 1567440000000 | 本地化-销售开始时间 |
-| └ sale_end_time | String | 1567440000000 | 本地化-销售结束时间 |
-| └ distance | String | 300 | 本地化-到门店距离（米） |
-| └ usable_shop_id | String | 10001 | 本地化-可用店铺id |
-| └ usable_shop_name | String | 饿了么卡券专营店 | 本地化-可用店铺名称 |
-| └ sale_price | String | 168 | 活动价 |
-| └ kuadian_promotion_info | String | ["每100减20","每200减50"] | 跨店满减信息 |
-| └ superior_brand | String | 1 | 是否品牌精选，0不是，1是 |
-| └ reward_info | Number | 1 | 比价场景专用，当系统检测到入参消费者ID购买当前商品会获得《天天开彩蛋》玩法的彩蛋时，该字段显示1，否则为0 |
-| └ is_brand_flash_sale | String | 1 | 是否品牌快抢，0不是，1是 |
-| └ localization_extend | String |  | 本地化-扩展信息 |
-| └ match_score | String | 10.0 | 物料评估-匹配分 |
-| └ commi_score | String | 20.0 | 物料评估-收益分 |
-| └ hot_flag | String | 1 | 是否是热门商品，0不是，1是 |
-| └ topn_info | TopNInfoDTO |  | 前N件佣金信息-前N件佣金生效或预热时透出以下字段 |
-| └ topn_quantity | Number | 3000 | 前N件剩余库存 |
-| └ topn_total_count | Number | 3000 | 前N件初始总库存 |
-| └ topn_end_time | String | 1937297392332 | 前N件佣金结束时间 |
-| └ topn_start_time | String | 1937297392332 | 前N件佣金开始时间 |
-| └ topn_rate | String | 30 | 前N件佣金率 |
-| └ bybt_info | BybtInfoDTO |  | 百亿补贴信息 |
-| └ bybt_brand_logo | String | //img.alicdn.com/bao/uploaded/i4/745957850/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg | 百亿补贴品牌logo |
-| └ bybt_pic_url | String | //img.alicdn.com/bao/uploaded/i4/745957850/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg | 百亿补贴白底图 |
-| └ bybt_item_tags | String
-                                 [] | ["https://gw.alicdn.com/tfs/TB1CvN50KH2gK0jSZJnXXaT1FXa-167-42.png?getAvatar=avatar","https://gw.alicdn.com/tfs/TB10rZqkCR26e4jSZFEXXbwuXXa-132-42.png?getAvatar=avatar"] | 百亿补贴商品特征标签，eg.今日发货、晚发补偿、限购一件等 |
-| └ bybt_coupon_amount | String | 10.00 | 百亿补贴专属券面额，仅限百亿补贴场景透出 |
-| └ bybt_show_price | String | 100.00 | 百亿补贴页面实时价 |
-| └ bybt_lowest_price | String | 200.00 | 全网对比参考价格 |
-| └ bybt_end_time | String | 1559750399000 | 商品的百亿补贴开始时间 |
-| └ bybt_start_time | String | 1559750399000 | 商品的百亿补贴结束时间 |
-| └ tt_sold_count | String | 200+ | 商品入驻淘特后产生的所有销量量级，不特指某段具体时间 |
-| └ maifan_promotion | MaifanPromotionDTO |  | 猫超买返卡信息 |
-| └ maifan_promotion_end_time | String | 1559750399000 | 猫超买返卡活动结束时间 |
-| └ maifan_promotion_start_time | String | 1559750399000 | 猫超买返卡活动开始时间 |
-| └ maifan_promotion_discount | String | 200 | 猫超买返卡面额 |
-| └ maifan_promotion_condition | String | 100 | 猫超买返卡总数，-1代表不限量，其他大于等于0的值为总数 |
-| └ cpa_reward_type | String | 0 1 2 | 额外奖励活动类型，如果一个商品有多个奖励类型，返回结果使用空格分割，0=预售单单奖励，1=618超级U选单单补 |
-| └ cpa_reward_amount | String | 1.11 2.22 3.21 | 额外奖励活动金额，活动奖励金额的类型与cpa_reward_type字段对应，如果一个商品有多个奖励类型，返回结果使用空格分割 |
-| └ activity_id | String | 188 | 合作伙伴单单补ID，用作“年货节超级单单补”活动合作伙伴奖励统计依据 |
-| └ rank_page_url | String | s.click.xxx | 榜单url |
-| └ item_search_type | String | 1-1 | 搜索类型 |
-| └ sp_campaign_list | SpCampaign
-                                 [] |  | 定向计划集合 |
-| └ sp_cid | String | 123 | 定向计划活动ID |
-| └ sp_name | String | 定向计划活动1 | 定向计划名称 |
-| └ sp_rate | String | 1550表示15.5% | 定向佣金率 |
-| └ sp_lock_status | String | 0 | 定向是否锁佣，0=不锁佣 1=锁佣 |
-| └ sp_apply_link | String | http://pub.alimama.com/portal/promo/shop/campaign/detail.htm?mode=info&campaignId=1000492470&creatorId=98836808&breadcrumb=false | 定向计划申请链接 |
-| └ sp_status | String | 1 | 定向计划是否可用 1-可用 0-不可用 |
-| page_result_key | String | abcde | 本地化-lbs分页标识，请在下一次翻页时作为入参传入 |
-
-### NodeJS 调用示例
-
-```javascript
-TopClient = require('./topClient').TopClient;
-var client = new TopClient({
-	'appkey': 'appkey',
-	'appsecret': 'secret',
-	'REST_URL': 'http://gw.api.taobao.com/router/rest'
-});
-
-client.execute('taobao.tbk.dg.material.optional', {
-	'start_dsr':'10',
-	'page_size':'20',
-	'page_no':'1',
-	'platform':'1',
-	'end_tk_rate':'1234',
-	'start_tk_rate':'1234',
-	'end_price':'10',
-	'start_price':'10',
-	'is_overseas':'false',
-	'is_tmall':'false',
-	'sort':'tk_rate_des',
-	'itemloc':'杭州',
-	'cat':'16,18',
-	'q':'女装',
-	'material_id':'2836',
-	'has_coupon':'false',
-	'ip':'13.2.33.4',
-	'adzone_id':'12345678',
-	'need_free_shipment':'true',
-	'need_prepay':'true',
-	'include_pay_rate_30':'true',
-	'include_good_rate':'true',
-	'include_rfd_rate':'true',
-	'npx_level':'2',
-	'device_encrypt':'MD5',
-	'device_value':'xxx',
-	'device_type':'IMEI',
-	'end_ka_tk_rate':'1234',
-	'start_ka_tk_rate':'1234',
-	'lock_rate_end_time':'1567440000000',
-	'lock_rate_start_time':'1567440000000',
-	'longitude':'121.473701',
-	'latitude':'31.230370',
-	'city_code':'310000',
-	'seller_ids':'1,2,3,4',
-	'special_id':'2323',
-	'relation_id':'3243',
-	'page_result_key':'abcdef',
-	'ucrowd_id':'1',
-	'ucrowd_rank_items':'数据结构JSON示例',
-	'get_topn_rate':'0',
-	'biz_scene_id':'1',
-	'promotion_type':'2'
-}, function(error, response) {
-	if (!error) console.log(response);
-	else console.log(error);
-})
-```
-
-### JSON 响应示例
-
-```json
-{
-    "tbk_dg_material_optional_response":{
-        "total_results":1212,
-        "result_list":{
-            "map_data":[
-                {
-                    "coupon_start_time":"2017-10-29",
-                    "coupon_end_time":"2017-10-29",
-                    "info_dxjh":"{\"19013551\":\"2850\",\"74510538\":\"2550\"}",
-                    "tk_total_sales":"11",
-                    "tk_total_commi":"323",
-                    "coupon_id":"d62db1ab8d9546b1bf0ff49bda5fc33b",
-                    "num_iid":"556633720749",
-                    "title":"毛呢阔腿裤港味复古女裤子秋冬九分裤萝卜裤显瘦高腰韩版2017新款",
-                    "pict_url":"https:\/\/img.alicdn.com\/bao\/uploaded\/i4\/745957850\/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg",
-                    "small_images":{
-                        "string":[
-                            "https:\/\/img.alicdn.com\/i4\/3077291146\/TB2NA3poDnI8KJjSszgXXc8ApXa_!!3077291146.jpg"
-                        ]
-                    },
-                    "reserve_price":"102.00",
-                    "zk_final_price":"88.00",
-                    "user_type":1,
-                    "provcity":"杭州",
-                    "item_url":"https:\/\/item.taobao.com\/item.htm?id=564591813536",
-                    "include_mkt":"false",
-                    "include_dxjh":"false",
-                    "commission_rate":"1550表示15.5%",
-                    "volume":123,
-                    "seller_id":232332,
-                    "shop_title":"xx旗舰店",
-                    "coupon_total_count":22323,
-                    "coupon_remain_count":111,
-                    "coupon_info":"满299元减20元",
-                    "commission_type":"MKT表示营销计划，SP表示定向计划，COMMON表示通用计划",
-                    "shop_dsr":13,
-                    "coupon_share_url":"uland.xxx",
-                    "url":"s.click.xxx",
-                    "level_one_category_name":"女装",
-                    "level_one_category_id":20,
-                    "category_name":"连衣裙",
-                    "category_id":162201,
-                    "short_title":"xxsd",
-                    "white_image":"https:\/\/img.alicdn.com\/bao\/uploaded\/i4\/745957850\/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg",
-                    "oetime":"2018-08-21 11:23:43",
-                    "ostime":"2018-08-21 11:23:43",
-                    "jdd_num":10,
-                    "jdd_price":"5",
-                    "uv_sum_pre_sale":23,
-                    "x_id":"uESS0mv8JvfJRMKlIgCD5At9VuHVBXoqBRihfQlo4ybLiKygRlqiN4eoxoZDfe38uSogWy6GB971jD2N8tLuuc",
-                    "coupon_start_fee":"29.00",
-                    "coupon_amount":"10.00",
-                    "item_description":"季凉被 全棉亲肤",
-                    "nick":"旗舰店",
-                    "orig_price":"25",
-                    "total_stock":5555,
-                    "sell_num":1111,
-                    "stock":4444,
-                    "tmall_play_activity_info":"前n件x折",
-                    "item_id":"5678899993",
-                    "real_post_fee":"0.00",
-                    "lock_rate":"1567440000000",
-                    "lock_rate_end_time":1567440000000,
-                    "lock_rate_start_time":1567440000000,
-                    "presale_discount_fee_text":"付定金立减5元",
-                    "presale_tail_end_time":1567440000000,
-                    "presale_tail_start_time":1567440000000,
-                    "presale_end_time":1567440000000,
-                    "presale_start_time":1567440000000,
-                    "presale_deposit":"100",
-                    "ysyl_tlj_send_time":"2019-11-10 21:59:59",
-                    "ysyl_commission_rate":"2030（表示20.3%）",
-                    "ysyl_tlj_face":"0.6",
-                    "ysyl_click_url":"https:\/\/uland.taobao.com\/coupon\/edetail?e=nqUNB1NOF3Bt3vqbdXnGloankzPYmeEFkgNrw6YHQf9pZTj41Orn8MwBAs06HAOzqQomYNedOiHDYPmqkFXqLR0HgBdG%2FDDL%2F1M%2FBw7Sf%2FesGXLf%2BqX4cbeC%2F2cR0p0NlWH0%2BknxpnCJJP%2FQkZSsyo1HvKjXo4uz&pid=mm_26381042_12970066_52864659&af=1",
-                    "ysyl_tlj_use_end_time":"2019-11-10 21:59:59",
-                    "ysyl_tlj_use_start_time":"2019-11-10 21:59:59",
-                    "sale_begin_time":"1567440000000",
-                    "sale_end_time":"1567440000000",
-                    "distance":"300",
-                    "usable_shop_id":"10001",
-                    "usable_shop_name":"饿了么卡券专营店",
-                    "sale_price":"168",
-                    "kuadian_promotion_info":"[\"每100减20\",\"每200减50\"]",
-                    "superior_brand":"1",
-                    "reward_info":1,
-                    "is_brand_flash_sale":"1",
-                    "localization_extend":"",
-                    "match_score":"10.0",
-                    "commi_score":"20.0",
-                    "hot_flag":"1",
-                    "topn_info":{
-                        "topn_quantity":3000,
-                        "topn_total_count":3000,
-                        "topn_end_time":"1937297392332",
-                        "topn_start_time":"1937297392332",
-                        "topn_rate":"30"
-                    },
-                    "bybt_info":{
-                        "bybt_brand_logo":"\/\/img.alicdn.com\/bao\/uploaded\/i4\/745957850\/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg",
-                        "bybt_pic_url":"\/\/img.alicdn.com\/bao\/uploaded\/i4\/745957850\/TB1WzSRmV9gSKJjSspbXXbeNXXa_!!0-item_pic.jpg",
-                        "bybt_item_tags":{
-                            "string":[
-                                "[\"https:\/\/gw.alicdn.com\/tfs\/TB1CvN50KH2gK0jSZJnXXaT1FXa-167-42.png?getAvatar=avatar\"",
-                                "\"https:\/\/gw.alicdn.com\/tfs\/TB10rZqkCR26e4jSZFEXXbwuXXa-132-42.png?getAvatar=avatar\"]"
-                            ]
-                        },
-                        "bybt_coupon_amount":"10.00",
-                        "bybt_show_price":"100.00",
-                        "bybt_lowest_price":"200.00",
-                        "bybt_end_time":"1559750399000",
-                        "bybt_start_time":"1559750399000"
-                    },
-                    "tt_sold_count":"200+",
-                    "maifan_promotion":{
-                        "maifan_promotion_end_time":"1559750399000",
-                        "maifan_promotion_start_time":"1559750399000",
-                        "maifan_promotion_discount":"200",
-                        "maifan_promotion_condition":"100"
-                    },
-                    "cpa_reward_type":"0 1 2",
-                    "cpa_reward_amount":"1.11 2.22 3.21",
-                    "activity_id":"188",
-                    "rank_page_url":"s.click.xxx",
-                    "item_search_type":"1-1",
-                    "sp_campaign_list":{
-                        "sp_campaign":[
-                            {
-                                "sp_cid":"123",
-                                "sp_name":"定向计划活动1",
-                                "sp_rate":"1550表示15.5%",
-                                "sp_lock_status":"0",
-                                "sp_apply_link":"http:\/\/pub.alimama.com\/portal\/promo\/shop\/campaign\/detail.htm?mode=info&campaignId=1000492470&creatorId=98836808&breadcrumb=false",
-                                "sp_status":"1"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        "page_result_key":"abcde"
-    }
-}
-```
-
-### 异常示例
-
-```json
-{
-	"error_response":{
-		"msg":"Remote service error",
-		"code":50,
-		"sub_msg":"非法参数",
-		"sub_code":"isv.invalid-parameter"
-	}
-}
-```
-
-### 错误码表
-
-| 错误码 | 错误描述 | 解决方案 |
-|--------|---------|---------|
-| 1001 | 非法的me参数值 | 传入正确的me参数值，含有券ID与商品ID信息 |
-| 10000 | 该itemId对应的宝贝已下架或非淘客宝贝 | 更换新的itemId查询 |
-| 4 | 查询不到对应的adzoneId，请检查adzoneId是否正确 | 查询不到对应的adzoneId，请检查adzoneId是否正确 |
-| 30002 | 参数q与cat不能都为空 | 参数q与cat不能都为空 |
-| 2 | pid不正确，请检查是否输入了正确的adzoneId和siteId | pid不正确，请检查是否输入了正确的adzoneId和siteId |
-| 50001 | 当前条件查询无结果 | 更换查询条件 |
-| 40001 | 调用失败 | 请稍后重试 |
-| 30001 | 无效物料ID | 请传入有效的物料ID |
-| 5 | pid校验失败 | 检查pid相关参数，稍后重试 |
-| isp.entry-sys-error | 内部服务出错 | 稍后重试 |
-| isp.pid-check-error | pid校验服务出错 | 检查pid相关参数，稍后重试 |
-| isp.sys-error | 内部服务异常 | 稍后重试 |
-| 50002 | 调用频率高，请稍后再试 | 调用频率高，请稍后再试 |
-| 1201 | 口令类型无效 | 请重试 |
-| 719 | 系统异常 | 请重试。另同步重要通知：您需将商品ID字段类型调整为同时兼容number和string类型，否则8月8日起调用将会出现异常，如已调整完成可忽略本次错误提示，点击https://mo.m.taobao.com/union/page_20220701_150002_297 查看公告详情，如有疑问可加入【淘宝联盟】线上合规升级咨询群（钉钉群：44748908）进行咨询。 |
-| 1911 | 该appkey没有本sceneId权限，如有需要请联系对口商务/运营申请（钉钉咨询群号：44964951） | 该appkey没有本sceneId权限，如有需要请联系对口商务/运营申请（钉钉咨询群号：44964951） |
 
 ---
 ##taobao.tbk.dg.newuser.order.sum（淘宝客-推广者-拉新活动对应数据查询）
@@ -2031,7 +1617,8 @@ client.execute('taobao.tbk.dg.material.optional', {
 | └ page_no | Number | 1 | 页码 |
 | └ page_size | Number | 20 | 每页大小 |
 | └ has_next | Boolean | true | 是否有下一页 |
-| └ results | Data
+| └ results | Data
+
                                  [] |  | resultList |
 | └ activity_id | String | dddxx | 活动ID |
 | └ biz_date | String | 20180321 | 日期 |
@@ -2150,7 +1737,8 @@ client.execute('taobao.tbk.dg.newuser.order.sum', {
 | └ page_no | String |  | pageNo |
 | └ page_size | String |  | pageSize |
 | └ total_count | String |  | 总值 |
-| └ results | Result
+| └ results | Result
+
                                  [] |  | 订单列表 |
 | └ tb_trade_parent_id | Number |  | 淘宝订单编号 |
 | └ special_id | Number |  | 会员关系id |
@@ -2427,7 +2015,8 @@ client.execute('taobao.tbk.dg.vegas.tlj.create', {
 |---------|------|--------|------|
 | result | RpcResult |  | 查询的对象 |
 | └ data | PageResult |  | 结果 |
-| └ results | Result
+| └ results | Result
+
                                  [] |  | 处罚订单列表 |
 | └ union_id | String |  | 淘宝联盟unionid（该字段不再支持） |
 | └ special_id | Number |  | 会员运营id（该字段不再支持） |
@@ -2640,9 +2229,11 @@ client.execute('taobao.tbk.content.recommend.material.get', {
 | content_link | String | 必须 | http://XXXx |  | 文章链接 |
 | content_id | String | 必须 | uc_xxxxx |  | 内容id |
 | sub_pid | String | 必须 | mm_123_0_0 |  | 达人pid |
-| picture_url | String
+| picture_url | String
+
         						[] | 必须 | ["123", "456"] | 最大列表长度：20 | 图片url列表，最多支持取前6张图片。图片建议：大小在150KB以内，分辨率在600*600以内，格式限制 jpg,png,bmp,gif。 |
-| picture_label | String
+| picture_label | String
+
         						[] | 可选 | ["科技", "数码"] | 最大列表长度：20 | 图片url对应的标签，必须统一用utf-8编码 |
 | content_title | String | 可选 | 文章标题 |  | 文章标题，统一用utf-8编码 |
 
@@ -2736,7 +2327,8 @@ client.execute('taobao.tbk.content.daren.material.upload', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | data | OrderPage | OrderPage | PublisherOrderDto |
-| └ results | PublisherOrderDto
+| └ results | PublisherOrderDto
+
                                  [] | PublisherOrderDto | PublisherOrderDto |
 | └ tb_paid_time | String | 2019-04-22 15:15:05 | 淘宝付款时间。解释：订单在淘宝付款的时间 |
 | └ tk_paid_time | String | 2019-04-22 15:15:05 | 付款时间。解释：订单付款的时间，该时间同步淘宝，可能会略晚于买家在淘宝的订单付款时间  （预售订单完尾款支付后，付款时间会自动更新为尾款支付的时间） |
@@ -2786,7 +2378,8 @@ client.execute('taobao.tbk.content.daren.material.upload', {
 | └ tb_deposit_time | String | 2019-09-09 12:01:01 | 定金淘宝付款时间。解释：预售时期，预售订单在淘宝支付定金的付款时间 |
 | └ tk_deposit_time | String | 2019-09-09 12:01:01 | 定金付款时间。解释：预售时期，预售订单支付定金的付款时间，该时间同步淘宝，可能会略晚于买家在淘宝的订单创建时间 |
 | └ tp_order_id | String | 3434 | 非电商淘系子订单号 |
-| └ service_fee_dto_list | ServiceFeeDTO
+| └ service_fee_dto_list | ServiceFeeDTO
+
                                  [] | ServiceFeeDto | 服务费信息（字段已废弃） |
 | └ tk_share_role_type | Number | 122 | 专项服务费来源，122-渠道（字段已废弃） |
 | └ share_relative_rate | String | 0.10 | 专项服务费率（字段已废弃） |
@@ -2801,7 +2394,8 @@ client.execute('taobao.tbk.content.daren.material.upload', {
 | └ untts | String | 1111TTTTTOOOO | 流量通untts（默认无，限定开放） |
 | └ pub_share_pre_fee_for_commission | BigDecimal | 0 | 付款预估佣金收入。解释：付款预估佣金收入=付款金额*佣金提成。以买家付款金额为基数，预估您可能获得的付款佣金收入，包含平台技术服务费金额（最终发钱时会减去平台技术服务费）。注意：因买家退款等原因，可能与结算预估佣金收入不一致。（特别说明：若想知道属于您名下的整体佣金收入，则整体付款佣金收入=付款预估佣金收入+平台专项服务费，为了简化展示报表，不再增加整体佣金收入字段，有需要的淘宝客可自行加和） |
 | └ pub_share_fee_for_commission | BigDecimal | 0 | 结算预估佣金收入。解释：结算预估佣金收入=付款金额*佣金提成。以买家确认收货的付款金额为基数，预估您可能获得的结算佣金收入，包含技术服务费金额（最终发钱时会减去平台技术服务费）。注意：因买家退款、您违规推广等原因，可能与您最终收入不一致，最终收入以月结后您实际收到的为准。（特别说明：若想知道属于您名下的整体佣金收入，则整体结算佣金收入=结算预估佣金收入+平台专项服务费，为了简化展示报表，不再增加整体佣金收入字段，有需要的淘宝客可自行加和） |
-| └ subsidy_info_dto_list | SubsidyDetailDTO
+| └ subsidy_info_dto_list | SubsidyDetailDTO
+
                                  [] | subsidyDetailDTOList | 补贴金额明细节点。解释：各补贴类型的类型名称、补贴比率、补贴金额、单笔补贴上限、补贴分成比率的详细说明 |
 | └ subsidy_type | String | 妈妈补贴 | 该笔订单包含的补贴类型 |
 | └ subsidy_rate | BigDecimal | 0 | 补贴比率 |
@@ -3485,105 +3079,6 @@ client.execute('taobao.tbk.dg.reports.query.click', {
 | 50001 | 无结果 | 无结果 |
 | 30001 | 非法的物料id | 非法的物料id |
 
----
-##taobao.tbk.dg.media.kuaishou.monthly.report（淘宝客-推广者-快手月报(达人维度)）
-
-### 请求参数
-
-| 参数名称 | 类型 | 是否必须 | 示例值 | 更多限制 | 描述 |
-|---------|------|---------|--------|---------|------|
-| report_type_id | String | 必须 | union_media_monthly_report_kuaishou |  | 月报报表名称，固定值 |
-| return_fields | String | 可选 | pub_id,sub_pub_id,sub_site_id,sub_adzone_id,div_rule,total_alipay_amt,settle_amount | 默认值：pub_id,sub_pub_id,sub_site_id,sub_adzone_id,div_rule,total_alipay_amt,settle_amount | 月报返回字段 |
-| dimensions | String | 可选 | ds |  | 聚合条件 |
-| page_no | Number | 必须 | 1 |  | 页码 |
-| page_size | Number | 必须 | 20 |  | 每页大小 |
-| filters | String | 必须 | ds=201908;div_rule=2 |  | 查询条件 |
-
-### 响应参数
-
-| 参数名称 | 类型 | 示例值 | 描述 |
-|---------|------|--------|------|
-| report_type_id | String | union_media_monthly_report_kuaishou | 月报报表名称，固定值 |
-| page_info | PageInfo | map | 分页信息 |
-| └ page_size | Number | 10 | 每页大小 |
-| └ page_no | Number | 1 | 当前页数 |
-| └ total_cnt | Number | 123 | 总数 |
-| data_list | DataMap [] |  | 系统自动生成 |
-| └ pub_id | Number | 123456 | 媒体平台memberid |
-| └ div_rule | String | 2 | 1-佣金5%订单；2-佣金2%订单 |
-| └ sub_pub_id | Number | 123456 | 达人memberId |
-| └ sub_site_id | Number | 123456 | 达人siteId |
-| └ sub_adzone_id | Number | 123456 | 达人adzoneId |
-| └ total_alipay_amt | String | 123.32 | 结算订单金额 |
-| └ settle_amount | String | 123.32 | 实际打款结算金额 |
-| result_code | Number | 500 | 业务错误码，200正常，500为异常 |
-| result_msg | String | sub_site_id为空 | 服务异常时将展示错误信息 |
-
-### NodeJS 调用示例
-
-```javascript
-TopClient = require('./topClient').TopClient;
-var client = new TopClient({
-	'appkey': 'appkey',
-	'appsecret': 'secret',
-	'REST_URL': 'http://gw.api.taobao.com/router/rest'
-});
-
-client.execute('taobao.tbk.dg.media.kuaishou.monthly.report', {
-	'report_type_id':'union_media_monthly_report_kuaishou',
-	'return_fields':'pub_id,sub_pub_id,sub_site_id,sub_adzone_id,div_rule,total_alipay_amt,settle_amount',
-	'dimensions':'ds',
-	'page_no':'1',
-	'page_size':'20',
-	'filters':'ds=201908;div_rule=2'
-}, function(error, response) {
-	if (!error) console.log(response);
-	else console.log(error);
-})
-```
-
-### JSON 响应示例
-
-```json
-{
-    "tbk_dg_media_kuaishou_monthly_report_response":{
-        "report_type_id":"union_media_monthly_report_kuaishou",
-        "page_info":{
-            "page_size":10,
-            "page_no":1,
-            "total_cnt":123
-        },
-        "data_list":{
-            "data_map":[
-                {
-                    "pub_id":123456,
-                    "div_rule":"2",
-                    "sub_pub_id":123456,
-                    "sub_site_id":123456,
-                    "sub_adzone_id":123456,
-                    "total_alipay_amt":"123.32",
-                    "settle_amount":"123.32"
-                }
-            ]
-        },
-        "result_code":500,
-        "result_msg":"sub_site_id为空"
-    }
-}
-```
-
-### 异常示例
-
-```json
-{
-	"error_response":{
-		"msg":"Remote service error",
-		"code":50,
-		"sub_msg":"非法参数",
-		"sub_code":"isv.invalid-parameter"
-	}
-}
-```
 
 
 ---
@@ -3609,14 +3104,16 @@ client.execute('taobao.tbk.dg.media.kuaishou.monthly.report', {
 | result | Result |  | 返回结果 |
 | └ success | Boolean | true | 是否成功 |
 | └ model | RightsSendRptDTO |  | model |
-| └ relation_rpt_list | RightsSendRelationRptDto
+| └ relation_rpt_list | RightsSendRelationRptDto
+
                                  [] |  | 渠道关系id的发放数据 |
 | └ biz_date | String | 20191201 | 日期 |
 | └ relation_id | Number | 111 | 渠道关系id |
 | └ fund_num | Number | 100 | 红包发放数量 |
 | └ pid | String | mm_123_123_123 | 渠道关系id关联的pid |
 | └ use_num | Number | 88 | 红包使用次数 |
-| └ pid_rpt_list | RightsSendRelationRptDto
+| └ pid_rpt_list | RightsSendRelationRptDto
+
                                  [] |  | pid的发放数据 |
 | └ biz_date | String | 20191201 | 日期 |
 | └ pid | String | mm_123_123_123 | pid |
@@ -3701,216 +3198,7 @@ client.execute('taobao.tbk.dg.vegas.send.report', {
 ```
 
 
----
-##taobao.tbk.dg.content.media.daily.report（淘宝客-推广者-微博日报(达人维度)）
 
-### 请求参数
-
-| 参数名称 | 类型 | 是否必须 | 示例值 | 更多限制 | 描述 |
-|---------|------|---------|--------|---------|------|
-| report_type_id | String | 必须 | union_content_media_daily_report |  | 日报报表名称，固定值 |
-| return_fields | String | 必须 | pub_id,name,sub_pub_id,sub_site_id,sub_adzone_id,biz_type,union_pv,union_uv,cm_settle_num,cm_settle_amt,cm_pub_share_fee,div_rule |  | 查询字段，固定字段列表 |
-| filters | String | 必须 | ds=20191020 |  | 查询条件，可传达人pid信息表示查询具体某个达人pid维度日报数据：如sub_pub_id=1;sub_site_id=1;sub_adzone_id=1 |
-| dimensions | String | 可选 | ds | 默认值：ds | 聚合条件 |
-| page_no | Number | 必须 | 1 |  | 页码 |
-| page_size | Number | 必须 | 20 |  | 每页大小 |
-
-### 响应参数
-
-| 参数名称 | 类型 | 示例值 | 描述 |
-|---------|------|--------|------|
-| report_type_id | String | union_media_daily_report_kuaishou | 日报报表名称，固定值 |
-| page_info | PageInfo | map | 分页信息 |
-| └ page_size | Number | 10 | 每页大小 |
-| └ page_no | Number | 1 | 当前页数 |
-| └ total_cnt | Number | 123 | 总数 |
-| data_list | DataMap [] |  | 系统自动生成 |
-| └ cm_pub_share_fee | String | 123.4 | 达人结算佣金金额 |
-| └ cm_settle_amt | String | 123.4 | 结算alipay金额 |
-| └ cm_settle_num | Number | 123 | 结算alipay笔数 |
-| └ union_uv | Number | 123 | 联盟口径UV |
-| └ union_pv | Number | 123 | 联盟口径PV |
-| └ sub_adzone_id | Number | 123456 | 达人adzoneId |
-| └ sub_site_id | Number | 123456 | 达人siteId |
-| └ sub_pub_id | Number | 123456 | 达人memberId |
-| └ pub_id | Number | 123456 | 媒体平台memberid |
-| └ div_rule | String | 2 | 佣金5%订单；2-佣金2%订单 |
-| result_code | Number | 500 | 业务错误码，200正常，500为异常 |
-| result_msg | String | sub_site_id为空 | 服务异常时将展示错误信息 |
-
-### NodeJS 调用示例
-
-```javascript
-TopClient = require('./topClient').TopClient;
-var client = new TopClient({
-	'appkey': 'appkey',
-	'appsecret': 'secret',
-	'REST_URL': 'http://gw.api.taobao.com/router/rest'
-});
-
-client.execute('taobao.tbk.dg.content.media.daily.report', {
-	'report_type_id':'union_content_media_daily_report',
-	'return_fields':'pub_id,name,sub_pub_id,sub_site_id,sub_adzone_id,biz_type,union_pv,union_uv,cm_settle_num,cm_settle_amt,cm_pub_share_fee,div_rule',
-	'filters':'ds=20191020',
-	'dimensions':'ds',
-	'page_no':'1',
-	'page_size':'20'
-}, function(error, response) {
-	if (!error) console.log(response);
-	else console.log(error);
-})
-```
-
-### JSON 响应示例
-
-```json
-{
-    "tbk_dg_content_media_daily_report_response":{
-        "report_type_id":"union_media_daily_report_kuaishou",
-        "page_info":{
-            "page_size":10,
-            "page_no":1,
-            "total_cnt":123
-        },
-        "data_list":{
-            "data_map":[
-                {
-                    "cm_pub_share_fee":"123.4",
-                    "cm_settle_amt":"123.4",
-                    "cm_settle_num":123,
-                    "union_uv":123,
-                    "union_pv":123,
-                    "sub_adzone_id":123456,
-                    "sub_site_id":123456,
-                    "sub_pub_id":123456,
-                    "pub_id":123456,
-                    "div_rule":"2"
-                }
-            ]
-        },
-        "result_code":500,
-        "result_msg":"sub_site_id为空"
-    }
-}
-```
-
-### 异常示例
-
-```json
-{
-	"error_response":{
-		"msg":"Remote service error",
-		"code":50,
-		"sub_msg":"非法参数",
-		"sub_code":"isv.invalid-parameter"
-	}
-}
-```
-
-
----
-##taobao.tbk.dg.content.media.monthly.report（淘宝客-推广者-微博月报(达人维度)）
-
-### 请求参数
-
-| 参数名称 | 类型 | 是否必须 | 示例值 | 更多限制 | 描述 |
-|---------|------|---------|--------|---------|------|
-| report_type_id | String | 必须 | union_content_media_monthly_report |  | 月报报表名称，固定值 |
-| return_fields | String | 可选 | pub_id,sub_pub_id,sub_site_id,sub_adzone_id,div_rule,total_alipay_amt,settle_amount,union_pv,union_uv | 默认值：pub_id,sub_pub_id,sub_site_id,sub_adzone_id,div_rule,total_alipay_amt,settle_amount,union_pv,union_uv | 月报返回字段 |
-| dimensions | String | 可选 | ds |  | 聚合条件 |
-| page_no | Number | 必须 | 1 |  | 页码 |
-| page_size | Number | 必须 | 20 |  | 每页大小 |
-| filters | String | 必须 | ds=201911 |  | 查询条件。查询达人pid维度数据需添加：sub_pub_id=xxx;sub_site_id=yyy;sub_adzone_id=zzz |
-
-### 响应参数
-
-| 参数名称 | 类型 | 示例值 | 描述 |
-|---------|------|--------|------|
-| report_type_id | String | union_content_media_monthly_report | 月报报表名称，固定值 |
-| page_info | PageInfo | map | 分页信息 |
-| └ page_size | Number | 10 | 每页大小 |
-| └ page_no | Number | 1 | 当前页数 |
-| └ total_cnt | Number | 123 | 总数 |
-| data_list | DataMap [] |  | 查询结果列表 |
-| └ pub_id | Number | 123456 | 媒体平台memberid |
-| └ div_rule | String | 1 | 1-佣金5%订单；其他枚举值根据结算公式待添加 |
-| └ sub_pub_id | Number | 123456 | 达人memberId |
-| └ sub_site_id | Number | 123456 | 达人siteId |
-| └ sub_adzone_id | Number | 123456 | 达人adzoneId |
-| └ total_alipay_amt | String | 123.32 | 结算订单金额 |
-| └ settle_amount | String | 123.32 | 实际打款结算金额 |
-| └ union_uv | Number | 123 | 联盟口径UV |
-| └ union_pv | Number | 123 | 联盟口径PV |
-| result_code | Number | 500 | 业务错误码，200正常，500为异常 |
-| result_msg | String | sub_site_id为空 | 服务异常时将展示错误信息 |
-
-### NodeJS 调用示例
-
-```javascript
-TopClient = require('./topClient').TopClient;
-var client = new TopClient({
-	'appkey': 'appkey',
-	'appsecret': 'secret',
-	'REST_URL': 'http://gw.api.taobao.com/router/rest'
-});
-
-client.execute('taobao.tbk.dg.content.media.monthly.report', {
-	'report_type_id':'union_content_media_monthly_report',
-	'return_fields':'pub_id,sub_pub_id,sub_site_id,sub_adzone_id,div_rule,total_alipay_amt,settle_amount,union_pv,union_uv',
-	'dimensions':'ds',
-	'page_no':'1',
-	'page_size':'20',
-	'filters':'ds=201911'
-}, function(error, response) {
-	if (!error) console.log(response);
-	else console.log(error);
-})
-```
-
-### JSON 响应示例
-
-```json
-{
-    "tbk_dg_content_media_monthly_report_response":{
-        "report_type_id":"union_content_media_monthly_report",
-        "page_info":{
-            "page_size":10,
-            "page_no":1,
-            "total_cnt":123
-        },
-        "data_list":{
-            "data_map":[
-                {
-                    "pub_id":123456,
-                    "div_rule":"1",
-                    "sub_pub_id":123456,
-                    "sub_site_id":123456,
-                    "sub_adzone_id":123456,
-                    "total_alipay_amt":"123.32",
-                    "settle_amount":"123.32",
-                    "union_uv":123,
-                    "union_pv":123
-                }
-            ]
-        },
-        "result_code":500,
-        "result_msg":"sub_site_id为空"
-    }
-}
-```
-
-### 异常示例
-
-```json
-{
-	"error_response":{
-		"msg":"Remote service error",
-		"code":50,
-		"sub_msg":"非法参数",
-		"sub_code":"isv.invalid-parameter"
-	}
-}
-```
 
 
 ---
@@ -4034,14 +3322,16 @@ client.execute('taobao.tbk.activity.info.get', {
 | └ remain_count | Number | 20 | 权益信息-剩余库存（权益剩余库存量） |
 | └ display_start_time | String | 1559232000000 | 权益信息展示开始时间，精确到毫秒时间戳 |
 | └ display_end_time | String | 1559750399000 | 权益信息展示结束时间，精确到毫秒时间戳 |
-| └ promotion_list | PromotionList
+| └ promotion_list | PromotionList
+
                                  [] |  | 权益信息 |
 | └ entry_used_start_time | String | 1559232000000 | 权益开始时间，精确到毫秒时间戳 |
 | └ entry_used_end_time | String | 1559750399000 | 权益结束时间，精确到毫秒时间戳 |
 | └ entry_condition | String | 100 | 权益起用门槛，满X元可用，券场景为满元，精确到分，如满100元可用 |
 | └ entry_discount | String | 30 | 权益面额，券场景为减钱，精确到分 |
 | └ promotion_extend | PromotionExtend |  | 权益扩展信息 |
-| └ recommend_item_list | RecommendItemList
+| └ recommend_item_list | RecommendItemList
+
                                  [] |  | 权益推荐商品 |
 | └ item_id | Number | 123456 | 权益推荐商品id |
 | └ url | String | //s.click.taobao.com/xxx | 商品链接 |
@@ -4167,7 +3457,8 @@ client.execute('taobao.tbk.dg.optimus.promotion', {
 |---------|------|--------|------|
 | result_msg | String | 成功 | 返回结果描述信息 |
 | data | Data |  | 返回结果封装对象 |
-| └ result_list | MapData
+| └ result_list | MapData
+
                                  [] |  | 返回结果封装对象 |
 | └ is_new_user | String | 1 | 若该用户当前无待核销的红包，则返回1，若当前有待核销的红包，则返回0 |
 | biz_error_desc | String | 说明 | 系统自动生成 |
@@ -4377,7 +3668,8 @@ client.execute('taobao.tbk.thor.task.select', {
 | 参数名称 | 类型 | 是否必须 | 示例值 | 更多限制 | 描述 |
 |---------|------|---------|--------|---------|------|
 | adzone_id | Number | 必须 | 33 |  | mm_xxx_xxx_xxx的第3段数字 |
-| offer_list | OfferList
+| offer_list | OfferList
+
         						[] | 可选 |  | 最大列表长度：100 | 活动列表 |
 | special_id | String | 可选 | 1 |  | 消费者对应的会员ID（会员ID或设备信息同时填时，优先使用会员ID） |
 | device_value | String | 可选 | ssss |  | 设备信息，加密后的值(IMEI,IDFA,OAID,MOBILE需要加密)，需用MD5加密，32位小写 |
@@ -4389,14 +3681,16 @@ client.execute('taobao.tbk.thor.task.select', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | data | Data |  | 返回结果 |
-| └ result_list | Resultlist
+| └ result_list | Resultlist
+
                                  [] |  | 返回结果列表 |
 | └ offer_id | String | 123 | 活动id |
 | └ status | String | 1 | 活动状态：1-符合活动要求，2-淘客无活动权限，3-用户不匹配活动，4-系统异常，5-活动不存在 |
 | └ click_url | String | https://www.taobao.com | 推广链接 |
 | └ wx_miniprogram_path | String | https://www.taobao.com | 微信小程序路径 |
 | └ wx_qrcode_url | String | https://www.taobao.com | 微信小程序码 |
-| └ strategy_result_list | StrategyResultList
+| └ strategy_result_list | StrategyResultList
+
                                  [] |  | 策略ID的匹配结果，仅在入参strategy_id_list字段非空时返回 |
 | └ strategy_id | String | 123 | 策略ID |
 | └ status | String | 1 | 状态：1-符合活动要求 ，3-用户不匹配活动，4-系统异常，6-策略ID不存在，7-策略ID无效 |
@@ -4501,7 +3795,8 @@ client.execute('taobao.tbk.rta.consumer.match', {
 | result | Result |  | 接口返回model |
 | └ biz_error_feature | String | demo | 错误代码 |
 | └ data | PageResult | 1234 | 返回素材id |
-| └ results | Results
+| └ results | Results
+
                                  [] |  | 数据结果 |
 | └ field_detail | String |  | 奖励明细数据，KV结构。字段释义见文档：https://www.yuque.com/docs/share/7ecf8cf1-7f99-4633-a2ed-f9b6f8116af5?# |
 | └ calc_type | Number | 1 | 明细类型，1：预估明细，2：结算明细 |
@@ -4755,7 +4050,8 @@ client.execute('taobao.tbk.private.tpwd.create', {
 |---------|------|--------|------|
 | result | RpcResult | {} | 返回模型 |
 | └ data | PageResult | {} | 分页模型 |
-| └ results | VegasCpaReportDTO
+| └ results | VegasCpaReportDTO
+
                                  [] | [] | 数据列表 |
 | └ union_30d_lx_uv | Number | 100 | 符合奖励要求的累计用户数；按入参是预估/结算，区分用户数为预估or可结算结果； |
 | └ reward_amount | String | 123.45 | 奖励金额；按入参是预估/结算，区分获得金额为预估or可结算结果； |
@@ -5010,7 +4306,8 @@ client.execute('taobao.tbk.dg.vegas.tlj.report', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | result | Result | 无 | 无 |
-| └ status_list | DataMap
+| └ status_list | DataMap
+
                                  [] | x | x |
 | └ pid | String | mm_1110_0_0 | 当入参不传pid的时候返回，表示账号关联的pid |
 | └ rid | String | 222 | 当入参传入pid的时候返回，表示pid关联的relationId |
@@ -5160,7 +4457,8 @@ client.execute('taobao.tbk.dg.vegas.tlj.share.convert', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | data | WbReportInfoDTO |  | 返回对象 |
-| └ data_list | WbReportDataDTO
+| └ data_list | WbReportDataDTO
+
                                  [] |  | 数据列表 |
 | └ uv_num | Number | 1 | 进店UV |
 | └ new_visitor_uv_num | Number | 1 | 新访客UV |
@@ -5306,14 +4604,16 @@ client.execute('taobao.tbk.seed.report.get', {
 | └ sub_title | String | 吉品鲍鱼 关西参 | 商品信息-商品子标题 |
 | └ brand_name | String | 淘宝心选 | 商品信息-品牌名称 |
 | └ annual_vol | String | 1万+ | 年销量 |
-| └ small_images | String
+| └ small_images | String
+
                                  [] |  | 商品信息-商品小图列表 |
 | └ real_post_fee | String | 0.00 | 商品邮费 |
 | └ price_promotion_info | PromotionInfoMapData |  | 价格促销信息 |
 | └ reserve_price | String | 102.00 | 商品信息-一口价通常显示为划线价 |
 | └ zk_final_price | String | 79.9 | 促销信息-销售价格，无促销时等于一口价，有促销时为促销价。若属于预售商品，付定金时间内，在线售卖价=预售价 |
 | └ final_promotion_price | String | 69.9 | 促销信息-预估到手价(元)。若属于预售商品，付定金时间内，预估到手价价=定金+尾款的预估到手价 |
-| └ final_promotion_path_list | FinalPromotionPathMapData
+| └ final_promotion_path_list | FinalPromotionPathMapData
+
                                  [] |  | 到手价优惠路径列表 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -5322,19 +4622,22 @@ client.execute('taobao.tbk.seed.report.get', {
 | └ promotion_end_time | String | 1661788799000 | 优惠结束时间 |
 | └ promotion_id | String | xx | 优惠ID |
 | └ future_activity_promotion_price | String | 99.5 | 预热预估到手价（元） |
-| └ future_activity_promotion_path_list | FutureActivityPromotionPathMapData
+| └ future_activity_promotion_path_list | FutureActivityPromotionPathMapData
+
                                  [] |  | 预热到手价优惠路径列表 |
 | └ promotion_title | String | 商品券 | 预热优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 预热优惠利益点文案，如“1件7.92折”、“每200减20”等 |
 | └ promotion_fee | String | 1300.00 | 预热实际优惠金额（元） |
 | └ promotion_start_time | String | 1661184000000 | 优惠开始时间 |
 | └ promotion_end_time | String | 1661788799000 | 优惠结束时间 |
-| └ promotion_tag_list | PromotionTagMapData
+| └ promotion_tag_list | PromotionTagMapData
+
                                  [] |  | 标签信息列表 |
 | └ tag_name | String | 88VIP | 标签名称，如“88VIP”、“花呗免息”、“猫超买返”、“是否包邮” |
 | └ predict_rounding_up_price | String | 56.1 | 促销信息-预估凑单价（元）。预估凑单叠加优惠后的商品单价 |
 | └ predict_rounding_up_price_desc | String | 需买1件 | 促销信息-凑单价说明，描述凑单价的实现说明。如 “可凑单”或“需买X件” |
-| └ more_promotion_list | MorePromotionMapData
+| └ more_promotion_list | MorePromotionMapData
+
                                  [] |  | 更多活动优惠 |
 | └ promotion_title | String | 满件折 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 2件9折 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -5343,7 +4646,8 @@ client.execute('taobao.tbk.seed.report.get', {
 | └ promotion_id | String | xx | 优惠ID |
 | └ promotion_total_count | Number | 1000 | 当天优惠总库存【指定优惠透出，不对外开放】 |
 | └ promotion_url | String | https:// | 优惠使用路径【指定优惠透出，不对外开放】 |
-| └ predict_rounding_up_path_list | PredictRoundingUpPathMapData
+| └ predict_rounding_up_path_list | PredictRoundingUpPathMapData
+
                                  [] |  | 预估凑单优惠路径 |
 | └ promotion_title | String | 店铺优惠 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 再买1件，可参与2件5折 | 优惠利益点文案，如“2件5折”、“每200减20”等 |
@@ -5354,13 +4658,15 @@ client.execute('taobao.tbk.seed.report.get', {
 | └ min_rebate | Number | 1 | 最低优惠比例（%），入参具体IP时，仅展示该IP最低优惠比例。 |
 | └ max_discount | String | 15.00 | 最高优惠金额（元，如15代表15 元），入参具体IP时，仅展示该IP最高优惠金额 |
 | └ min_discount | String | 15.00 | 最低优惠金额（元，如15代表15 元），入参具体IP时，仅展示该IP最低优惠金额 |
-| └ province_list | String
+| └ province_list | String
+
                                  [] |  | 国补生效区域（省份）。不入参IP时展示各可用省份；入参IP时，全国可用商品展示各可用省份，区域可用商品仅展示IP对应省份。 |
 | └ publish_info | PublishInfo |  | 淘客推广信息 |
 | └ income_rate | String | 5.50 | 商品信息-收入比率(%)；商品佣金比率+补贴比率 |
 | └ click_url | String | //item.taobao.com/item.htm?id=556633720749&scm=1007.16190.92234.0&pvid=41362290-fa0b-4252-b172-6afc9c00e2c8&app_pvid=0ab0fac715095507006577956e | 链接-宝贝推广链接 |
 | └ coupon_share_url | String | //uland.taobao.com/coupon/edetail?e=pR6YtnFKK%2B8GQASttHIRqcEWOmlidB03Pf45HLyCqA8dRAklSM5tEQ36hBQToU3M3MmLjFwLsqgZxcV7BPtHQDd2Naqom0e0&mt=1&app_pvid=0ab0fac715095507006577956e&ptl=app_pvid:0ab0fac715095507006577956e;tpp_pvid:41362290-fa0b-4252-b172-6afc9c00e2c8 | 链接-宝贝+券二合一页面链接 |
-| └ sp_campaign_list | SpCampaign
+| └ sp_campaign_list | SpCampaign
+
                                  [] |  | 定向计划集合-仅支持联系商务或运营小二申请定向计划合集字段权限 |
 | └ sp_cid | String | 123 | 定向计划活动ID |
 | └ sp_name | String | 定向计划活动1 | 定向计划名称 |
@@ -5394,7 +4700,8 @@ client.execute('taobao.tbk.seed.report.get', {
 | └ presale_discount_fee_text | String | 付定金立减5元 | 预售商品-优惠信息 |
 | └ favorites_info | FavoritesInfo |  | 选品库信息 |
 | └ total_count | Number | 100 | 选品库收藏夹总数量 |
-| └ favorites_list | FavoritesDetail
+| └ favorites_list | FavoritesDetail
+
                                  [] |  | 选品库收藏夹详细信息 |
 | └ favorites_id | Number | 12334 | 选品库收藏夹id |
 | └ favorites_title | String | 测试选品库 | 选品库收藏夹标题 |
@@ -5647,7 +4954,8 @@ client.execute('taobao.tbk.dg.material.recommend', {
 | └ total | Number | 222 | 总数 |
 | └ page_no | Number | 1 | 页码 |
 | └ page_size | Number | 100 | 页容 |
-| └ data_list | String
+| └ data_list | String
+
                                  [] |  | 人群列表 |
 | └ position_index | String | 111 | 位点信息 |
 | result_code | Number | 200 | 返回码 |
@@ -5877,7 +5185,8 @@ client.execute('taobao.tbk.content.order.get', {
 | └ coupon_share_url | String | //uland.taobao.com/coupon/edetail?e=pR6YtnFKK%2B8GQASttHIRqcEWOmlidB03Pf45HLyCqA8dRAklSM5tEQ36hBQToU3M3MmLjFwLsqgZxcV7BPtHQDd2Naqom0e0&mt=1&app_pvid=0ab0fac715095507006577956e&ptl=app_pvid:0ab0fac715095507006577956e;tpp_pvid:41362290-fa0b-4252-b172-6afc9c00e2c8 | 链接-宝贝+券二合一页面链接 |
 | └ future_activity_commission_rate | String | 1550表示15.5% | 预热活动到手价对应的佣金比率 |
 | └ future_activity_time | String | 1665504000000 | 预热价活动开始时间 |
-| └ sp_campaign_list | SpCampaign
+| └ sp_campaign_list | SpCampaign
+
                                  [] |  | 定向计划集合-仅支持联系商务或运营小二申请定向计划合集字段权限 |
 | └ sp_cid | String | 123 | 定向计划活动ID |
 | └ sp_name | String | 定向计划活动1 | 定向计划名称 |
@@ -5902,7 +5211,8 @@ client.execute('taobao.tbk.content.order.get', {
 | └ price_promotion_info | PromotionInfoMapData |  | 价格促销信息 |
 | └ predict_rounding_up_price | String | 56.1 | 促销信息-预估凑单价（元）。预估凑单叠加优惠后的商品单价 |
 | └ predict_rounding_up_price_desc | String | 需买1件 | 促销信息-凑单价说明，描述凑单价的实现说明。如 “可凑单”或“需买X件” |
-| └ more_promotion_list | MorePromotionMapData
+| └ more_promotion_list | MorePromotionMapData
+
                                  [] |  | 更多活动优惠 |
 | └ promotion_title | String | 满件折 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 2件9折 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -5914,7 +5224,8 @@ client.execute('taobao.tbk.content.order.get', {
 | └ reserve_price | String | 102.00 | 商品信息-一口价通常显示为划线价 |
 | └ zk_final_price | String | 79.9 | 促销信息-销售价格，无促销时等于一口价，有促销时为促销价。若属于预售商品，付定金时间内，在线售卖价=预售价 |
 | └ final_promotion_price | String | 69.9 | 促销信息-预估到手价(元)。若属于预售商品，付定金时间内，预估到手价价=定金+尾款的预估到手价 |
-| └ final_promotion_path_list | FinalPromotionPathMapData
+| └ final_promotion_path_list | FinalPromotionPathMapData
+
                                  [] |  | 到手价优惠路径列表 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -5923,14 +5234,16 @@ client.execute('taobao.tbk.content.order.get', {
 | └ promotion_end_time | String | 1661788799000 | 优惠结束时间 |
 | └ promotion_id | String | xx | 优惠ID |
 | └ future_activity_promotion_price | String | 99.5 | 预热预估到手价（元） |
-| └ future_activity_promotion_path_list | FutureActivityPromotionPathMapData
+| └ future_activity_promotion_path_list | FutureActivityPromotionPathMapData
+
                                  [] |  | 预热到手价优惠路径列表 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 预热优惠利益点文案，如“1件7.92折”、“每200减20”等 |
 | └ promotion_fee | String | 1300.00 | 预热实际优惠金额（元） |
 | └ promotion_start_time | String | 1661184000000 | 优惠开始时间 |
 | └ promotion_end_time | String | 1661788799000 | 优惠结束时间 |
-| └ promotion_tag_list | PromotionTagMapData
+| └ promotion_tag_list | PromotionTagMapData
+
                                  [] |  | 标签信息列表 |
 | └ tag_name | String | 88VIP | 标签名称，如“88VIP”、“花呗免息”、“猫超买返”、“是否包邮” |
 | └ gov_subsidy | GovSubsidyDTO |  | 国家补贴 |
@@ -5940,7 +5253,8 @@ client.execute('taobao.tbk.content.order.get', {
 | └ min_rebate | Number | 1 | 最低优惠比例（%），入参具体IP时，仅展示该IP最低优惠比例。 |
 | └ max_discount | String | 15.00 | 最高优惠金额（元，如15代表15 元），入参具体IP时，仅展示该IP最高优惠金额 |
 | └ min_discount | String | 15.00 | 最低优惠金额（元，如15代表15 元），入参具体IP时，仅展示该IP最低优惠金额 |
-| └ province_list | String
+| └ province_list | String
+
                                  [] |  | 国补生效区域（省份）。不入参IP时展示各可用省份；入参IP时，全国可用商品展示各可用省份，区域可用商品仅展示IP对应省份。 |
 | └ item_basic_info | BasicMapData |  | 商品基础信息 |
 | └ title | String | 复古女裤子秋冬九分裤萝卜裤显瘦高腰韩版2017新款 | 商品信息-商品标题 |
@@ -5959,7 +5273,8 @@ client.execute('taobao.tbk.content.order.get', {
 | └ level_one_category_name | String | 美妆 | 商品信息-一级类目名称 |
 | └ tk_total_sales | String | 11 | 商品信息-淘客30天推广量 |
 | └ provcity | String | 浙江 杭州 | 商品信息-宝贝所在地 |
-| └ small_images | String
+| └ small_images | String
+
                                  [] |  | 商品信息-商品小图列表 |
 | └ annual_vol | String | 1万+ | 年销量 |
 | └ real_post_fee | String | 0.00 | 商品邮费 |
@@ -6249,7 +5564,8 @@ client.execute('taobao.tbk.dg.material.optional.upgrade', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | data | OrderPage |  | 返回数据 |
-| └ result | PublisherRefundOrderDTO
+| └ result | PublisherRefundOrderDTO
+
                                  [] |  | 真正的业务数据结构 |
 | └ refund_suit_id | String | 12345 | 维权编号，是当前订单发生维权退款的编号，非淘宝订单编号，如订单发生多次维权，则会产生多个维权编号 |
 | └ tb_trade_parent_id | String | 1707359271433894971 | 淘宝父订单编号(买家在淘宝后台显示的订单编号) |
@@ -6400,7 +5716,8 @@ client.execute('taobao.tbk.order.refund.get', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | data | TbkLinkDTO | TbkLinkDTO | TbkLinkDTO |
-| └ material_url_list | MaterialUrlList
+| └ material_url_list | MaterialUrlList
+
                                  [] |  | 转链结果 |
 | └ msg | String | 无权限 | 物料对应错误描述 |
 | └ code | Number | 1001 | 物料对应错误码 |
@@ -6443,7 +5760,8 @@ client.execute('taobao.tbk.order.refund.get', {
 | └ cps_supered_short_tpwd | String | ￥p7lYdesjTCG￥ | 超红cps短口令，必须在required_link_type字段入参才可出参 |
 | └ input_material_url | String | s.click.taobao.com | 入参物料链接 |
 | └ extra_info | String | skuid已失效 | 转链成功的场景下，需要补充说明的信息 |
-| └ multiple_items_coupon_info_list | MaterialMultiCouponPromotionInfoDTO
+| └ multiple_items_coupon_info_list | MaterialMultiCouponPromotionInfoDTO
+
                                  [] |  | 多件价券信息 |
 | └ coupon_title | String | 商品券 | 优惠名称 |
 | └ coupon_desc | String | 满7999减1300 | 优惠券信息，满XX元减XX元，满x件减y元 |
@@ -6452,7 +5770,8 @@ client.execute('taobao.tbk.order.refund.get', {
 | └ coupon_end_time | String | 2022-12-15 00:00:00 | 优惠结束时间 |
 | └ activity_id | String | xx | 优惠ID |
 | └ coupon_remain_count | Number | 99987 | 优惠剩余数量 |
-| └ shop_url_list | ShopUrlList
+| └ shop_url_list | ShopUrlList
+
                                  [] |  | 店铺转链结果 |
 | └ msg | String | 无权限 | 物料对应错误描述 |
 | └ code | Number | 1001 | 物料对应错误码 |
@@ -6464,7 +5783,8 @@ client.execute('taobao.tbk.order.refund.get', {
 | └ cps_short_url | String | https://s.click.taobao.com/FvHjOPu | 店铺CPS短链 |
 | └ cps_full_tpwd | String | 58￥ CZ3457 EAqldesjTCt￥ https://m.tb.cn/h.UQ4ceEB  韩都衣舍旗舰店 | 店铺CPS链接对应长口令 |
 | └ input_shop_id | String | 123 | 入参的店铺ID |
-| └ event_url_list | EventUrlList
+| └ event_url_list | EventUrlList
+
                                  [] |  | 活动转链信息 |
 | └ msg | String | 无权限 | 物料对应错误描述 |
 | └ code | Number | 1001 | 物料对应错误码 |
@@ -6476,7 +5796,8 @@ client.execute('taobao.tbk.order.refund.get', {
 | └ cps_short_url | String | https://s.click.taobao.com/EvHjOPu | 会场CPS短链接 |
 | └ cps_full_tpwd | String | 37￥ CZ3457 PnIodeIlU9z￥ https://m.tb.cn/h.UQ4ceEz  22年天猫双旦礼遇季-主会场 | 会场CPS链接的长口令 |
 | └ input_page_id | String | 203567898765 | 入参的会场ID |
-| └ item_url_list | ItemUrlList
+| └ item_url_list | ItemUrlList
+
                                  [] |  | 单品转链信息 |
 | └ msg | String | 无权限 | 物料对应错误描述 |
 | └ code | Number | 1001 | 物料对应错误码 |
@@ -6518,7 +5839,8 @@ client.execute('taobao.tbk.order.refund.get', {
 | └ cps_supered_short_tpwd | String | ￥LOcqdeIlU9y￥ | 超红cps短口令，必须在required_link_type字段入参才可出参 |
 | └ input_item_id | String | i87a9ja90d8-09qrjcoa7qwl | 入参的商品ID |
 | └ extra_info | String | skuid已失效 | 转链成功的场景下，需要补充说明的信息 |
-| └ multiple_items_coupon_info_list | ItemMultiCouponPromotionInfoDTO
+| └ multiple_items_coupon_info_list | ItemMultiCouponPromotionInfoDTO
+
                                  [] |  | 多件价券信息 |
 | └ coupon_title | String | 商品券 | 优惠名称 |
 | └ coupon_desc | String | 满7999减1300 | 优惠券信息，满XX元减XX元，满x件减y元 |
@@ -7163,7 +6485,8 @@ client.execute('taobao.tbk.feed.indicator.upload', {
 | └ page_no | Number | 1 | 页码 |
 | └ page_size | Number | 20 | 页容 |
 | └ total_count | Number | 100 | 总数 |
-| └ result | DataExchangeDTO
+| └ result | DataExchangeDTO
+
                                  [] |  | 数据列表 |
 | └ ds | String | 20230519 | 日期分区 |
 | └ event_id | Number | 1111 | 星任务id |
@@ -7272,7 +6595,8 @@ client.execute('taobao.tbk.feed.indicator.exchange', {
 | └ page_no | Number | 1 | 页码 |
 | └ page_size | Number | 20 | 页容 |
 | └ total_count | Number | 100 | 总数 |
-| └ result | CooperationFeedEventDTO
+| └ result | CooperationFeedEventDTO
+
                                  [] |  | 数据列表 |
 | └ event_id | Number | 123456789 | 星任务id |
 | └ secret_key | String | abcd1234 | 接单密钥 |
@@ -7561,7 +6885,8 @@ client.execute('taobao.tbk.seed.event.fee.update', {
 | └ page_no | Number | 1 | 页码 |
 | └ page_size | Number | 20 | 页容 |
 | └ total_count | Number | 100 | 总数 |
-| └ result | MediaEventUpdateInfoDTO
+| └ result | MediaEventUpdateInfoDTO
+
                                  [] |  | 数据列表 |
 | └ change_request_id | String | 123 | 变更请求id |
 | └ change_request_time | Date | 2023-09-23 12:00:00 | 变更请求发起时间 |
@@ -7750,7 +7075,8 @@ client.execute('taobao.tbk.rta.uvid.get', {
 | data | MediaOrderDTO |  | 结果数据 |
 | └ media_order_id | String | 123 | 媒体账单id |
 | └ cost_amount | Number | 10000 | 实际结算总金额 |
-| └ result | OrderDetailDTO
+| └ result | OrderDetailDTO
+
                                  [] |  | 结果列表 |
 | └ media_order_id | String | 123 | 媒体账单id |
 | └ order_dimision_id | String | 123 | 订单维度id（例如：星任务id） |
@@ -7872,7 +7198,8 @@ client.execute('taobao.tbk.feed.order.check', {
 | └ reserve_price | String | 102.00 | 商品信息-一口价通常显示为划线价 |
 | └ zk_final_price | String | 79.9 | 促销信息-销售价格，无促销时等于一口价，有促销时为促销价。若属于预售商品，付定金时间内，在线售卖价=预售价 |
 | └ final_promotion_price | String | 69.9 | 促销信息-预估到手价(元)。若属于预售商品，付定金时间内，预估到手价价=定金+尾款的预估到手价 |
-| └ final_promotion_path_list | FinalPromotionPathMapData
+| └ final_promotion_path_list | FinalPromotionPathMapData
+
                                  [] |  | 到手价优惠路径列表 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -7881,26 +7208,30 @@ client.execute('taobao.tbk.feed.order.check', {
 | └ promotion_end_time | String | 1661788799000 | 优惠结束时间 |
 | └ promotion_id | String | xx | 优惠ID |
 | └ future_activity_promotion_price | String | 99.5 | 预热预估到手价（元） |
-| └ future_activity_promotion_path_list | FutureActivityPromotionPathMapData
+| └ future_activity_promotion_path_list | FutureActivityPromotionPathMapData
+
                                  [] |  | 预热到手价优惠路径列表 |
 | └ promotion_title | String | 商品券 | 预热优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 预热优惠利益点文案，如“1件7.92折”、“每200减20”等 |
 | └ promotion_fee | String | 1300.00 | 预热实际优惠金额（元） |
 | └ promotion_start_time | String | 1661184000000 | 优惠开始时间 |
 | └ promotion_end_time | String | 1661788799000 | 优惠结束时间 |
-| └ promotion_tag_list | PromotionTagMapData
+| └ promotion_tag_list | PromotionTagMapData
+
                                  [] |  | 标签信息列表 |
 | └ tag_name | String | 88VIP | 标签名称，如“88VIP”、“花呗免息”、“猫超买返”、“是否包邮” |
 | └ predict_rounding_up_price | String | 56.1 | 促销信息-预估凑单价（元）。预估凑单叠加优惠后的商品单价 |
 | └ predict_rounding_up_price_desc | String | 需买1件 | 促销信息-凑单价说明，描述凑单价的实现说明。如 “可凑单”或“需买X件” |
-| └ more_promotion_list | MorePromotionMapData
+| └ more_promotion_list | MorePromotionMapData
+
                                  [] |  | 更多活动优惠 |
 | └ promotion_title | String | 满件折 | 预热优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 2件9折 | 预热优惠利益点文案，如“1件7.92折”、“每200减20”等 |
 | └ promotion_start_time | String | 1661222400000 | 优惠开始时间 |
 | └ promotion_end_time | String | 1662393600000 | 优惠结束时间 |
 | └ promotion_id | String | xx | 优惠ID |
-| └ predict_rounding_up_path_list | PredictRoundingUpPathMapData
+| └ predict_rounding_up_path_list | PredictRoundingUpPathMapData
+
                                  [] |  | 预估凑单优惠路径 |
 | └ promotion_title | String | 店铺优惠 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 再买1件，可参与2件5折 | 优惠利益点文案，如“2件5折”、“每200减20”等 |
@@ -7908,7 +7239,8 @@ client.execute('taobao.tbk.feed.order.check', {
 | └ income_rate | String | 5.50 | 商品信息-收入比率(%)；商品佣金比率+补贴比率 |
 | └ click_url | String | //item.taobao.com/item.htm?id=556633720749&scm=1007.16190.92234.0&pvid=41362290-fa0b-4252-b172-6afc9c00e2c8&app_pvid=0ab0fac715095507006577956e | 链接-宝贝推广链接 |
 | └ coupon_share_url | String | //uland.taobao.com/coupon/edetail?e=pR6YtnFKK%2B8GQASttHIRqcEWOmlidB03Pf45HLyCqA8dRAklSM5tEQ36hBQToU3M3MmLjFwLsqgZxcV7BPtHQDd2Naqom0e0&mt=1&app_pvid=0ab0fac715095507006577956e&ptl=app_pvid:0ab0fac715095507006577956e;tpp_pvid:41362290-fa0b-4252-b172-6afc9c00e2c8 | 链接-宝贝+券二合一页面链接 |
-| └ sp_campaign_list | SpCampaign
+| └ sp_campaign_list | SpCampaign
+
                                  [] |  | 定向计划集合-仅支持联系商务或运营小二申请定向计划合集字段权限 |
 | └ sp_cid | String | 123 | 定向计划活动ID |
 | └ sp_name | String | 定向计划活动1 | 定向计划名称 |
@@ -7938,7 +7270,8 @@ client.execute('taobao.tbk.feed.order.check', {
 | └ presale_discount_fee_text | String | 付定金立减5元 | 预售商品-优惠信息 |
 | └ favorites_info | FavoritesInfo |  | 选品库信息 |
 | └ total_count | Number | 100 | 选品库收藏夹总数量 |
-| └ favorites_list | FavoritesDetail
+| └ favorites_list | FavoritesDetail
+
                                  [] |  | 选品库收藏夹详细信息 |
 | └ favorites_id | Number | 12334 | 选品库收藏夹id |
 | └ favorites_title | String | 测试选品库 | 选品库收藏夹标题 |
@@ -8164,7 +7497,8 @@ client.execute('taobao.tbk.interest.items.get', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | data | TbkLinkDTO |  | 转链结果 |
-| └ material_url_list | MaterialUrlList
+| └ material_url_list | MaterialUrlList
+
                                  [] |  | 链接/口令转链结果 |
 | └ code | Number | 1001 | 物料对应错误码 |
 | └ msg | String | 无权限 | 物料对应错误描述 |
@@ -8192,7 +7526,8 @@ client.execute('taobao.tbk.interest.items.get', {
 | └ promotion_info_dto | UrlPromotionInfoDTO |  | 营销信息 |
 | └ commission_rate | String | 6.00 | 商品收入比率(%)：商品佣金比率+补贴比率。同物料类接口income_rate |
 | └ commission_type | String | MKT | 佣金类型。MKT表示营销计划，SP表示定向计划，COMMON表示通用计划，ZX表示自选计划 |
-| └ shop_url_list | ShopUrlList
+| └ shop_url_list | ShopUrlList
+
                                  [] |  | 店铺转链结果 |
 | └ code | Number | 1001 | 物料对应错误码 |
 | └ msg | String | 无权限 | 物料对应错误描述 |
@@ -8203,7 +7538,8 @@ client.execute('taobao.tbk.interest.items.get', {
 | └ cps_short_url | String | https://s.click.taobao.com/FvHjOPu | 店铺CPS短链 |
 | └ cps_full_tpwd | String | 58￥ CZ3457 EAqldesjTCt￥ https://m.tb.cn/h.UQ4ceEB  韩都衣舍旗舰店 | 店铺CPS链接对应长口令 |
 | └ cps_short_tpwd | String | ￥EAqldesjTCt￥ | 店铺CPS链接对应短口令 |
-| └ event_url_list | EventUrlList
+| └ event_url_list | EventUrlList
+
                                  [] |  | 会场页面转链结果 |
 | └ code | Number | 1001 | 物料对应错误码 |
 | └ msg | String | 无权限 | 物料对应错误描述 |
@@ -8214,7 +7550,8 @@ client.execute('taobao.tbk.interest.items.get', {
 | └ cps_short_tpwd | String | ￥PnIodeIlU9z￥ | 会场CPS链接的短口令 |
 | └ cps_short_url | String | https://s.click.taobao.com/EvHjOPu | 会场CPS短链接 |
 | └ cps_full_tpwd | String | 37￥ CZ3457 PnIodeIlU9z￥ https://m.tb.cn/h.UQ4ceEz  22年天猫双旦礼遇季-主会场 | 会场CPS链接的长口令 |
-| └ item_url_list | ItemUrlList
+| └ item_url_list | ItemUrlList
+
                                  [] |  | 商品转链结果 |
 | └ input_item_id | String | i87a9ja90d8-09qrjcoa7qwl | 入参的商品ID |
 | └ extra_info | String | skuid已失效 | 转链成功的场景下，需要补充说明的信息 |
@@ -8435,7 +7772,8 @@ client.execute('taobao.tbk.content.general.link.convert', {
 | └ reserve_price | String | 102.00 | 商品信息-一口价通常显示为划线价 |
 | └ zk_final_price | String | 79.9 | 促销信息-销售价格，无促销时等于一口价，有促销时为促销价。若属于预售商品，付定金时间内，在线售卖价=预售价 |
 | └ final_promotion_price | String | 69.9 | 促销信息-预估到手价(元)。若属于预售商品，付定金时间内，预估到手价价=定金+尾款的预估到手价 |
-| └ final_promotion_path_list | FinalPromotionPathMapData
+| └ final_promotion_path_list | FinalPromotionPathMapData
+
                                  [] |  | 到手价优惠路径列表 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -8444,26 +7782,30 @@ client.execute('taobao.tbk.content.general.link.convert', {
 | └ promotion_end_time | String | 1661788799000 | 优惠结束时间 |
 | └ promotion_id | String | xx | 优惠ID |
 | └ future_activity_promotion_price | String | 99.5 | 预热预估到手价（元） |
-| └ future_activity_promotion_path_list | FutureActivityPromotionPathMapData
+| └ future_activity_promotion_path_list | FutureActivityPromotionPathMapData
+
                                  [] |  | 预热到手价优惠路径列表 |
 | └ promotion_title | String | 商品券 | 预热优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 预热优惠利益点文案，如“1件7.92折”、“每200减20”等 |
 | └ promotion_fee | String | 1300.00 | 预热实际优惠金额（元） |
 | └ promotion_start_time | String | 1661184000000 | 优惠开始时间 |
 | └ promotion_end_time | String | 1661788799000 | 优惠结束时间 |
-| └ promotion_tag_list | PromotionTagMapData
+| └ promotion_tag_list | PromotionTagMapData
+
                                  [] |  | 标签信息列表 |
 | └ tag_name | String | 88VIP | 标签名称，如“88VIP”、“花呗免息”、“猫超买返”、“是否包邮” |
 | └ predict_rounding_up_price | String | 56.1 | 促销信息-预估凑单价（元）。预估凑单叠加优惠后的商品单价 |
 | └ predict_rounding_up_price_desc | String | 需买1件 | 促销信息-凑单价说明，描述凑单价的实现说明。如 “可凑单”或“需买X件” |
-| └ more_promotion_list | MorePromotionMapData
+| └ more_promotion_list | MorePromotionMapData
+
                                  [] |  | 更多活动优惠 |
 | └ promotion_title | String | 满件折 | 预热优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 2件9折 | 预热优惠利益点文案，如“1件7.92折”、“每200减20”等 |
 | └ promotion_start_time | String | 1661222400000 | 优惠开始时间 |
 | └ promotion_end_time | String | 1662393600000 | 优惠结束时间 |
 | └ promotion_id | String | xx | 优惠ID |
-| └ predict_rounding_up_path_list | PredictRoundingUpPathMapData
+| └ predict_rounding_up_path_list | PredictRoundingUpPathMapData
+
                                  [] |  | 预估凑单优惠路径 |
 | └ promotion_title | String | 店铺优惠 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 再买1件，可参与2件5折 | 优惠利益点文案，如“2件5折”、“每200减20”等 |
@@ -8471,7 +7813,8 @@ client.execute('taobao.tbk.content.general.link.convert', {
 | └ income_rate | String | 5.50 | 商品信息-收入比率(%)；商品佣金比率+补贴比率 |
 | └ click_url | String | //item.taobao.com/item.htm?id=556633720749&scm=1007.16190.92234.0&pvid=41362290-fa0b-4252-b172-6afc9c00e2c8&app_pvid=0ab0fac715095507006577956e | 链接-宝贝推广链接 |
 | └ coupon_share_url | String | //uland.taobao.com/coupon/edetail?e=pR6YtnFKK%2B8GQASttHIRqcEWOmlidB03Pf45HLyCqA8dRAklSM5tEQ36hBQToU3M3MmLjFwLsqgZxcV7BPtHQDd2Naqom0e0&mt=1&app_pvid=0ab0fac715095507006577956e&ptl=app_pvid:0ab0fac715095507006577956e;tpp_pvid:41362290-fa0b-4252-b172-6afc9c00e2c8 | 链接-宝贝+券二合一页面链接 |
-| └ sp_campaign_list | SpCampaignDTO
+| └ sp_campaign_list | SpCampaignDTO
+
                                  [] |  | 定向计划集合-仅支持联系商务或运营小二申请定向计划合集字段权限 |
 | └ sp_cid | String | 123 | 定向计划活动ID |
 | └ sp_name | String | 定向计划活动1 | 定向计划名称 |
@@ -8798,7 +8141,8 @@ client.execute('taobao.tbk.dg.uvid.behavior.report', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | data | TbkLinkDTO | TbkLinkDTO | TbkLinkDTO |
-| └ material_url_list | MaterialUrlList
+| └ material_url_list | MaterialUrlList
+
                                  [] |  | 解析结果 |
 | └ msg | String | 无权限 | 物料对应错误描述 |
 | └ code | Number | 1001 | 物料对应错误码 |
@@ -9041,7 +8385,8 @@ client.execute('taobao.tbk.dg.rta.uvid.match', {
 | data | DspRtaResult [] |  | data |
 | └ device_type | String | 11 | 设备类型 |
 | └ device_value | String | 11 | 设备值 |
-| └ match_result | MatchRes
+| └ match_result | MatchRes
+
                                  [] | {"12": 1} | 任务匹配结果，key：任务id，value：1-命中该任务 |
 | └ task_id | String | 11 | 任务id |
 | └ status | Number | 1 | 0-不符合任务要求，1-符合任务要求，2-设备未识别，3-系统异常，可重试 |
@@ -9257,7 +8602,8 @@ client.execute('taobao.tbk.sc.vc.landing.link.convert', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | data | TbkLinkDTO | TbkLinkDTO | TbkLinkDTO |
-| └ material_url_list | MaterialUrlList
+| └ material_url_list | MaterialUrlList
+
                                  [] |  | 转链结果 |
 | └ msg | String | 无权限 | 物料对应错误描述 |
 | └ code | Number | 1001 | 物料对应错误码 |
@@ -9272,7 +8618,8 @@ client.execute('taobao.tbk.sc.vc.landing.link.convert', {
 | └ promotion_info_dto | MaterialPromotionInfoDTO |  | 营销信息 |
 | └ commission_rate | String | 6.00 | 商品收入比率(%)：商品佣金比率+补贴比率。同物料类接口income_rate |
 | └ commission_type | String | MKT | 佣金类型。MKT表示营销计划，SP表示定向计划，COMMON表示通用计划，ZX表示自选计划 |
-| └ item_url_list | ItemUrlList
+| └ item_url_list | ItemUrlList
+
                                  [] |  | 单品转链信息 |
 | └ msg | String | 无权限 | 单品转链信息 |
 | └ code | Number | 1001 | 物料对应错误码 |
@@ -9397,7 +8744,8 @@ client.execute('taobao.tbk.dg.eshare.link.convert', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | data | PicSearchResult |  | 结果 |
-| └ item_infos | ItemInfo
+| └ item_infos | ItemInfo
+
                                  [] |  | 商品列表 |
 | └ item_id | String | xxx-qqq | 商品ID |
 | └ img | String | http://img | 商品图片地址 |
@@ -9409,7 +8757,8 @@ client.execute('taobao.tbk.dg.eshare.link.convert', {
 | └ shop_type | String | 天猫 | 店铺类型 |
 | └ provcity | String | 地区 | 地区 |
 | └ coupon | String | 5 | 优惠券信息 |
-| └ icon_list | String
+| └ icon_list | String
+
                                  [] |  | 营销标签 |
 | result_msg | String | success | 结果描述 |
 
@@ -9546,181 +8895,6 @@ client.execute('taobao.tbk.dg.image.ecognition.page.query', {
 ```
 
 
----
-##taobao.tbk.item.info.get（淘宝客-公用-淘宝客商品详情查询(简版)）
-
-### 请求参数
-
-| 参数名称 | 类型 | 是否必须 | 示例值 | 更多限制 | 描述 |
-|---------|------|---------|--------|---------|------|
-| num_iids | String | 必须 | 123,456 |  | 商品ID串，用,分割，最大40个 |
-| platform | Number | 可选 | 1 | 默认值：1 | 链接形式：1：PC，2：无线，默认：１ |
-| ip | String | 可选 | 11.22.33.43 |  | ip地址，影响邮费获取，如果不传或者传入不准确，邮费无法精准提供 |
-| biz_scene_id | String | 可选 | 1 |  | 1-动态ID转链场景，2-消费者比价场景，3-商品库导购场景（不填默认为1） |
-| promotion_type | String | 可选 | 2 |  | 1-自购省，2-推广赚（代理模式专属ID，代理模式必填，非代理模式不用填写该字段） |
-| relation_id | String | 可选 | 1 |  | 渠道关系ID |
-| manage_item_pub_id | Number | 可选 | 1 |  | 商品库服务账户(场景id3权限对应的memberid） |
-
-### 响应参数
-
-| 参数名称 | 类型 | 示例值 | 描述 |
-|---------|------|--------|------|
-| results | NTbkItem [] |  | 淘宝客商品 |
-| └ cat_name | String | 女装 | 一级类目名称 |
-| └ num_iid | String | 123 | 商品ID |
-| └ title | String | 连衣裙 | 商品标题 |
-| └ pict_url | String | http://gi4.md.alicdn.com/bao/uploaded/i4/xxx.jpg | 商品主图 |
-| └ small_images | String
-                                 [] | http://gi4.md.alicdn.com/bao/uploaded/i4/xxx.jpg | 商品小图列表 |
-| └ reserve_price | String | 102.00 | 商品一口价格 |
-| └ zk_final_price | String | 88.00 | 折扣价（元） 若属于预售商品，付定金时间内，折扣价=预售价 |
-| └ user_type | Number | 1 | 卖家类型，0表示集市，1表示商城，3表示特价版 |
-| └ provcity | String | 杭州 | 商品所在地 |
-| └ item_url | String | http://detail.m.tmall.com/item.htm?id=xxx | 商品链接 |
-| └ seller_id | Number | 123 | 卖家id |
-| └ volume | Number | 1 | 30天销量 |
-| └ nick | String | xx旗舰店 | 店铺名称 |
-| └ cat_leaf_name | String | 情趣内衣 | 叶子类目名称 |
-| └ is_prepay | Boolean | true | 是否加入消费者保障 |
-| └ shop_dsr | Number | 23 | 店铺dsr 评分 |
-| └ ratesum | Number | 13 | 卖家等级 |
-| └ i_rfd_rate | Boolean | true | 退款率是否低于行业均值 |
-| └ h_good_rate | Boolean | true | 好评率是否高于行业均值 |
-| └ h_pay_rate30 | Boolean | true | 成交转化是否高于行业均值 |
-| └ free_shipment | Boolean | true | 是否包邮 |
-| └ material_lib_type | String | 1 | 商品库类型，支持多库类型输出，以英文逗号分隔“,”分隔，1:营销商品主推库，如果值为空则不属于1这种商品类型 |
-| └ presale_discount_fee_text | String | 付定金立减20元 | 预售商品-商品优惠信息 |
-| └ presale_tail_end_time | Number | 1937297392332 | 预售商品-付定金结束时间（毫秒） |
-| └ presale_tail_start_time | Number | 1937297392332 | 预售商品-付尾款开始时间（毫秒） |
-| └ presale_end_time | Number | 1937297392332 | 预售商品-付定金结束时间（毫秒） |
-| └ presale_start_time | Number | 1937297392332 | 预售商品-付定金开始时间（毫秒） |
-| └ presale_deposit | String | 100 | 预售商品-定金（元） |
-| └ ju_play_end_time | Number | 1937297392332 | 聚划算满减  -结束时间（毫秒） |
-| └ ju_play_start_time | Number | 1937297392332 | 聚划算满减  -开始时间（毫秒） |
-| └ play_info | String | 玩法 | 1聚划算满减：满N件减X元，满N件X折，满N件X元）  2天猫限时抢：前N分钟每件X元，前N分钟满N件每件X元，前N件每件X元） |
-| └ tmall_play_activity_end_time | Number | 1937297392332 | 天猫限时抢可售  -结束时间（毫秒） |
-| └ tmall_play_activity_start_time | Number | 1937297392332 | 天猫限时抢可售  -开始时间（毫秒） |
-| └ ju_online_start_time | String | 1581868800000 | 聚划算信息-聚淘开始时间（毫秒） |
-| └ ju_online_end_time | String | 1582300799000 | 聚划算信息-聚淘结束时间（毫秒） |
-| └ ju_pre_show_start_time | String | 1581868800000 | 聚划算信息-商品预热开始时间（毫秒） |
-| └ ju_pre_show_end_time | String | 1582300799000 | 聚划算信息-商品预热结束时间（毫秒） |
-| └ sale_price | String | 168 | 活动价 |
-| └ kuadian_promotion_info | String | ["每100减20","每200减50"] | 跨店满减信息 |
-| └ superior_brand | String | 1 | 是否品牌精选，0不是，1是 |
-| └ hot_flag | String | 1 | 是否是热门商品，0不是，1是 |
-| └ input_num_iid | String | sdfqere-123dfqweq | 入参的（新）商品ID |
-
-### NodeJS 调用示例
-
-```javascript
-TopClient = require('./topClient').TopClient;
-var client = new TopClient({
-	'appkey': 'appkey',
-	'appsecret': 'secret',
-	'REST_URL': 'http://gw.api.taobao.com/router/rest'
-});
-
-client.execute('taobao.tbk.item.info.get', {
-	'num_iids':'123,456',
-	'platform':'1',
-	'ip':'11.22.33.43',
-	'biz_scene_id':'1',
-	'promotion_type':'2',
-	'relation_id':'1',
-	'manage_item_pub_id':'1'
-}, function(error, response) {
-	if (!error) console.log(response);
-	else console.log(error);
-})
-```
-
-### JSON 响应示例
-
-```json
-{
-    "tbk_item_info_get_response":{
-        "results":{
-            "n_tbk_item":[
-                {
-                    "cat_name":"女装",
-                    "num_iid":"123",
-                    "title":"连衣裙",
-                    "pict_url":"http:\/\/gi4.md.alicdn.com\/bao\/uploaded\/i4\/xxx.jpg",
-                    "small_images":{
-                        "string":[
-                            "http:\/\/gi4.md.alicdn.com\/bao\/uploaded\/i4\/xxx.jpg"
-                        ]
-                    },
-                    "reserve_price":"102.00",
-                    "zk_final_price":"88.00",
-                    "user_type":1,
-                    "provcity":"杭州",
-                    "item_url":"http:\/\/detail.m.tmall.com\/item.htm?id=xxx",
-                    "seller_id":123,
-                    "volume":1,
-                    "nick":"xx旗舰店",
-                    "cat_leaf_name":"情趣内衣",
-                    "is_prepay":true,
-                    "shop_dsr":23,
-                    "ratesum":13,
-                    "i_rfd_rate":true,
-                    "h_good_rate":true,
-                    "h_pay_rate30":true,
-                    "free_shipment":true,
-                    "material_lib_type":"1",
-                    "presale_discount_fee_text":"付定金立减20元",
-                    "presale_tail_end_time":1937297392332,
-                    "presale_tail_start_time":1937297392332,
-                    "presale_end_time":1937297392332,
-                    "presale_start_time":1937297392332,
-                    "presale_deposit":"100",
-                    "ju_play_end_time":1937297392332,
-                    "ju_play_start_time":1937297392332,
-                    "play_info":"玩法",
-                    "tmall_play_activity_end_time":1937297392332,
-                    "tmall_play_activity_start_time":1937297392332,
-                    "ju_online_start_time":"1581868800000",
-                    "ju_online_end_time":"1582300799000",
-                    "ju_pre_show_start_time":"1581868800000",
-                    "ju_pre_show_end_time":"1582300799000",
-                    "sale_price":"168",
-                    "kuadian_promotion_info":"[\"每100减20\",\"每200减50\"]",
-                    "superior_brand":"1",
-                    "hot_flag":"1",
-                    "input_num_iid":"sdfqere-123dfqweq"
-                }
-            ]
-        }
-    }
-}
-```
-
-### 异常示例
-
-```json
-{
-	"error_response":{
-		"msg":"Remote service error",
-		"code":50,
-		"sub_msg":"非法参数",
-		"sub_code":"isv.invalid-parameter"
-	}
-}
-```
-
-### 错误码表
-
-| 错误码 | 错误描述 | 解决方案 |
-|--------|---------|---------|
-| 50001 | 无结果 | 更换商品查询 |
-| 40001 | 内部调用失败 | 稍后重试 |
-| 50002 | 调用频率过高 | 稍后重试 |
-| 2 | pid不正确 | 检查除pid之外的相关入参adzoneId和siteId |
-| 4 | adzoneId不存在 | 检查入参adzoneId |
-| 5 | pid校验出错 | 检查pid相关入参，稍后重试 |
-| 1 | 服务系统异常 | 请重试 |
-| isp.tbkapi-service-unavailable | 系统异常 | 请重试 |
-| 50 | 系统异常 | 请重试。另同步重要通知：您需将商品ID字段类型调整为同时兼容number和string类型，否则8月8日起调用将会出现异常，如已调整完成可忽略本次错误提示，点击https://mo.m.taobao.com/union/page_20220701_150002_297 查看公告详情，如有疑问可加入【淘宝联盟】线上合规升级咨询群（钉钉群：44748908）进行咨询。 |
 
 ---
 ##taobao.tbk.shop.recommend.get（淘宝客-公用-店铺关联推荐）
@@ -9814,7 +8988,8 @@ client.execute('taobao.tbk.shop.recommend.get', {
 
 | 参数名称 | 类型 | 是否必须 | 示例值 | 更多限制 | 描述 |
 |---------|------|---------|--------|---------|------|
-| requests | TbkSpreadRequest
+| requests | TbkSpreadRequest
+
         						[] | 必须 |  | 最大列表长度：20 | 请求列表，内部包含多个url |
 
 ### 响应参数
@@ -10310,7 +9485,8 @@ client.execute('taobao.tbk.sc.publisher.info.save', {
 |---------|------|--------|------|
 | data | Data |  | data |
 | └ total_count | Number | 40 | 共享字段 - 总记录数 |
-| └ inviter_list | MapData
+| └ inviter_list | MapData
+
                                  [] | inviterList | 共享字段 - 渠道或会员列表 |
 | └ relation_app | String | common | 共享字段 - 备案场景：common（通用备案），etao（一淘备案），minietao（一淘小程序备案），offlineShop（线下门店备案），offlinePerson（线下个人备案） |
 | └ create_date | Date | 2018-06-01 11:12:23 | 共享字段 - 备案日期 |
@@ -10335,7 +9511,8 @@ client.execute('taobao.tbk.sc.publisher.info.save', {
 | └ punish_status | String | 1 | 渠道独有 - 处罚状态 |
 | └ external_id | String | 12345 | 淘宝客外部用户标记 |
 | └ external_type | String | 1 | 1-微信、2-微博、3-抖音、4-快手、5-QQ，0-其他 |
-| └ root_pid_channel_list | String
+| └ root_pid_channel_list | String
+
                                  [] | ["mm_1_1_1"] | 渠道专属pidList |
 
 ### NodeJS 调用示例
@@ -10641,275 +9818,6 @@ client.execute('taobao.tbk.tpwd.parse', {
 | 20012 | 淘口令解析输入口令为空 | 检查输入 |
 | 6 | 当前淘口令无效，无法解析 | 更换淘口令 |
 
----
-##taobao.tbk.item.details.get（淘宝客-公用-淘宝客商品详情查询(详细版)）
-
-### 请求参数
-
-| 参数名称 | 类型 | 是否必须 | 示例值 | 更多限制 | 描述 |
-|---------|------|---------|--------|---------|------|
-| item_id | String | 必须 | 3232 |  | 商品ID。多个用","分割，一次最多查询20个 |
-| ip | String | 可选 | 11.22.33.43 |  | ip地址，影响邮费获取，如果不传或者传入不准确，邮费无法精准提供 |
-| get_topn_rate | Number | 可选 | 0 |  | 是否获取前N件佣金信息，0否，1是，其他值否 |
-| biz_scene_id | String | 可选 | 1 |  | 1-动态ID转链场景，2-消费者比价场景，3-商品库导购场景（不填默认为1） |
-| promotion_type | String | 可选 | 2 |  | 1-自购省，2-推广赚（代理模式专属ID，代理模式必填，非代理模式不用填写该字段） |
-| relation_id | String | 可选 | 1 |  | 渠道关系ID |
-| manage_item_pub_id | Number | 可选 | 1 |  | 商品库服务账户(场景id3权限对应的memberid） |
-
-### 响应参数
-
-| 参数名称 | 类型 | 示例值 | 描述 |
-|---------|------|--------|------|
-| results | TbkItemDetail [] |  | 仅淘宝客商品，字段值根据API赋权等级输出 |
-| └ real_post_fee | String | 10.00 | 商品邮费金额，单位元（根据入参IP计算邮费）(字段等级C) |
-| └ property_image_list | TbkItemDetailPropImg
-                                 [] |  | 商品属性图片信息(字段等级C) |
-| └ image_url | String | https://img.alicdn.com/bao/uploaded/i4/33283/O1CN01JMY9uO1a7enNCmCEP_!!33283.jpg | 属性图片主图地址(字段等级C) |
-| └ properties | String | 1627207:6733755172（颜色分类--棉柔巾100抽(绿)） | 属性ID串(字段等级C) |
-| └ property_list | TbkItemDetailProp
-                                 [] |  | 商品属性信息(字段等级C) |
-| └ value_text | String | 36 | 属性值名称(字段等级C) |
-| └ value_id | Number | 671 | 属性值ID(字段等级C) |
-| └ property_text | String | 尺码 | 属性名称(字段等级C) |
-| └ property_id | Number | 20509 | 属性ID(字段等级C) |
-| └ tmall_desc_url | String | ttps://mdetail.tmall.com/templates/pages/desc?id=5323 | pc宝贝详情(字段等级S) |
-| └ taobao_desc_url | String | https://h5.m.taobao.com/app/detail/desc.html?_isH5Des=true#!id=2332&type=0&f=sdsdsd | H5宝贝详情(字段等级S) |
-| └ sku_list | TbkItemDetailSku
-                                 [] |  | 商品sku信息(字段等级B) |
-| └ property_list | TbkItemDetailSkuProp
-                                 [] |  | sku属性(字段等级B) |
-| └ value_text | String | 藏青色 | 属性值名称(字段等级B) |
-| └ value_id | Number | 28866 | 属性值ID(字段等级B) |
-| └ property_text | String | 颜色分类 | 属性名称(字段等级B) |
-| └ property_id | Number | 1627207 | 属性ID(字段等级B) |
-| └ value_alias_text | String | 藏青色 | 属性值别名(字段等级B) |
-| └ quantity | String | 6 | sku库存 (字段等级B) |
-| └ sku_id | Number | 4112264076 | skuId(字段等级B) |
-| └ sku_final_price | String | 88.50 | sku折扣价(字段等级B, 联盟口径，仅支持单个商品查询。该价格不建议直接用于返利等场景计算因为淘宝内有可能会叠加其他优惠条件) |
-| └ sku_reserve_price | String | 102.00 | sku一口价(字段等级B，仅支持单个商品查询) |
-| └ level_one_category_name | String | 女装 | 一级类目名称(字段等级C) |
-| └ item_id | String | 4112264076123 | 商品ID |
-| └ title | String | 连衣裙 | 商品标题(字段等级C) |
-| └ pict_url | String | http://gi4.md.alicdn.com/bao/uploaded/i4/xxx.jpg | 商品主图(字段等级C) |
-| └ small_images | String
-                                 [] | http://gi4.md.alicdn.com/bao/uploaded/i4/xxx.jpg | 商品小图列表(字段等级C) |
-| └ user_type | Number | 1 | 卖家类型，0表示集市，1表示商城(字段等级C)，3表示特价版 |
-| └ provcity | String | 杭州 | 商品所在地(字段等级C) |
-| └ item_url | String | http://detail.m.tmall.com/item.htm?id=xxx | 商品链接(字段等级C) |
-| └ seller_id | Number | 123 | 卖家id(字段等级C) |
-| └ volume | Number | 1 | 30天销量(字段等级C) |
-| └ category_name | String | 情趣内衣 | 叶子类目名称(字段等级C) |
-| └ is_prepay | Boolean | true | 是否加入消费者保障(字段等级SA) |
-| └ shop_dsr | Number | 23 | 店铺dsr 评分(字段等级SA) |
-| └ ratesum | Number | 13 | 卖家等级(字段等级SA) |
-| └ i_rfd_rate | Boolean | true | 退款率是否低于行业均值(字段等级SA) |
-| └ h_good_rate | Boolean | true | 好评率是否高于行业均值(字段等级SA) |
-| └ h_pay_rate30 | Boolean | true | 成交转化是否高于行业均值(字段等级SA) |
-| └ material_lib_type | String | 1 | 商品库类型，支持多库类型输出，以英文逗号分隔“,”分隔，1:营销商品主推库，2. 内容商品库，如果值为空则不属于1，2这两种商品类型(字段等级C) |
-| └ presale_discount_fee_text | String | 付定金立减20元 | 预售商品-商品优惠信息(字段等级C) |
-| └ presale_tail_end_time | Number | 1937297392332 | 预售商品-付定金结束时间（毫秒）(字段等级C) |
-| └ presale_tail_start_time | Number | 1937297392332 | 预售商品-付尾款开始时间（毫秒）(字段等级C) |
-| └ presale_end_time | Number | 1937297392332 | 预售商品-付定金结束时间（毫秒）(字段等级C) |
-| └ presale_start_time | Number | 1937297392332 | 预售商品-付定金开始时间（毫秒）(字段等级C) |
-| └ presale_deposit | String | 100 | 预售商品-定金（元）(字段等级C) |
-| └ ju_play_end_time | Number | 1937297392332 | 聚划算满减 -结束时间（毫秒）(字段等级C) |
-| └ ju_play_start_time | Number | 1937297392332 | 聚划算满减 -开始时间（毫秒）(字段等级C) |
-| └ play_info | String | 玩法 | 1聚划算满减：满N件减X元，满N件X折，满N件X元） 2天猫限时抢：前N分钟每件X元，前N分钟满N件每件X元，前N件每件X元）(字段等级C) |
-| └ tmall_play_activity_end_time | Number | 1937297392332 | 天猫限时抢可售 -结束时间（毫秒）(字段等级C) |
-| └ tmall_play_activity_start_time | Number | 1937297392332 | 天猫限时抢可售 -开始时间（毫秒）(字段等级C) |
-| └ reserve_price | String | 102.00 | 商品一口价格(字段等级C) |
-| └ zk_final_price | String | 88.00 | 折扣价（元） 若属于预售商品，付定金时间内，折扣价=预售价(字段等级C) |
-| └ nick | String | xx旗舰店 | 店铺名称(字段等级C) |
-| └ white_image | String | https://img.alicdn.com/bao/uploaded/TB1De0xk4n1gK0jSZKPXXXvUXXa.png | 商品信息-商品白底图(字段等级C) |
-| └ short_title | String | 巴布豆菠萝超薄干爽拉拉裤xl60+6 | 商品信息-商品短标题(字段等级C) |
-| └ quantity | String | 10 | 库存信息-商品库存(字段等级C) |
-| └ commission_rate | Number | 1550 | 商品信息-佣金比率。1550表示15.5%(字段等级SA) |
-| └ coupon_id | String | d62db1ab8d9546b1bf0ff49bda5fc33b | 优惠券信息-优惠券id(字段等级SA) |
-| └ coupon_start_time | String | 2017-10-29 | 优惠券信息-优惠券开始时间(字段等级SA) |
-| └ coupon_end_time | String | 2017-10-29 | 优惠券信息-优惠券结束时间(字段等级SA) |
-| └ coupon_info | String | 满299元减20元 | 优惠券信息-优惠券满减信息(字段等级SA) |
-| └ coupon_amount | String | 10.00 | 优惠券信息-优惠券面额。(字段等级SA) |
-| └ coupon_start_fee | String | 29.00 | 优惠券信息-优惠券起用门槛，满X元可用。(字段等级SA) |
-| └ coupon_remain_count | String | 111 | 优惠券信息-优惠券剩余量(字段等级SA) |
-| └ coupon_total_count | String | 22323 | 优惠券信息-优惠券总量(字段等级SA) |
-| └ sale_price | String | 168 | 活动价 |
-| └ kuadian_promotion_info | String | ["每100减20","每200减50"] | 跨店满减信息 |
-| └ superior_brand | String | 1 | 是否品牌精选，0不是，1是 |
-| └ hot_flag | String | 1 | 是否是热门商品，0不是，1是 |
-| └ topn_info | TopNInfoDTO |  | 前N件佣金信息-前N件佣金生效或预热时透出以下字段 |
-| └ topn_quantity | Number | 3000 | 前N件剩余库存 |
-| └ topn_total_count | Number | 3000 | 前N件初始总库存 |
-| └ topn_end_time | String | 1937297392332 | 前N件佣金结束时间 |
-| └ topn_start_time | String | 1937297392332 | 前N件佣金开始时间 |
-| └ topn_rate | String | 30 | 前N件佣金率 |
-| └ input_item_id | String | qeqscd1231-uqwenqe | 输入的（新）商品ID |
-
-### NodeJS 调用示例
-
-```javascript
-TopClient = require('./topClient').TopClient;
-var client = new TopClient({
-	'appkey': 'appkey',
-	'appsecret': 'secret',
-	'REST_URL': 'http://gw.api.taobao.com/router/rest'
-});
-
-client.execute('taobao.tbk.item.details.get', {
-	'item_id':'3232',
-	'ip':'11.22.33.43',
-	'get_topn_rate':'0',
-	'biz_scene_id':'1',
-	'promotion_type':'2',
-	'relation_id':'1',
-	'manage_item_pub_id':'1'
-}, function(error, response) {
-	if (!error) console.log(response);
-	else console.log(error);
-})
-```
-
-### JSON 响应示例
-
-```json
-{
-    "tbk_item_details_get_response":{
-        "results":{
-            "tbk_item_detail":[
-                {
-                    "real_post_fee":"10.00",
-                    "property_image_list":{
-                        "tbk_item_detail_prop_img":[
-                            {
-                                "image_url":"https:\/\/img.alicdn.com\/bao\/uploaded\/i4\/33283\/O1CN01JMY9uO1a7enNCmCEP_!!33283.jpg",
-                                "properties":"1627207:6733755172（颜色分类--棉柔巾100抽(绿)）"
-                            }
-                        ]
-                    },
-                    "property_list":{
-                        "tbk_item_detail_prop":[
-                            {
-                                "value_text":"36",
-                                "value_id":671,
-                                "property_text":"尺码",
-                                "property_id":20509
-                            }
-                        ]
-                    },
-                    "tmall_desc_url":"ttps:\/\/mdetail.tmall.com\/templates\/pages\/desc?id=5323",
-                    "taobao_desc_url":"https:\/\/h5.m.taobao.com\/app\/detail\/desc.html?_isH5Des=true#!id=2332&type=0&f=sdsdsd",
-                    "sku_list":{
-                        "tbk_item_detail_sku":[
-                            {
-                                "property_list":{
-                                    "tbk_item_detail_sku_prop":[
-                                        {
-                                            "value_text":"藏青色",
-                                            "value_id":28866,
-                                            "property_text":"颜色分类",
-                                            "property_id":1627207,
-                                            "value_alias_text":"藏青色"
-                                        }
-                                    ]
-                                },
-                                "quantity":"6",
-                                "sku_id":4112264076,
-                                "sku_final_price":"88.50",
-                                "sku_reserve_price":"102.00"
-                            }
-                        ]
-                    },
-                    "level_one_category_name":"女装",
-                    "item_id":"4112264076123",
-                    "title":"连衣裙",
-                    "pict_url":"http:\/\/gi4.md.alicdn.com\/bao\/uploaded\/i4\/xxx.jpg",
-                    "small_images":{
-                        "string":[
-                            "http:\/\/gi4.md.alicdn.com\/bao\/uploaded\/i4\/xxx.jpg"
-                        ]
-                    },
-                    "user_type":1,
-                    "provcity":"杭州",
-                    "item_url":"http:\/\/detail.m.tmall.com\/item.htm?id=xxx",
-                    "seller_id":123,
-                    "volume":1,
-                    "category_name":"情趣内衣",
-                    "is_prepay":true,
-                    "shop_dsr":23,
-                    "ratesum":13,
-                    "i_rfd_rate":true,
-                    "h_good_rate":true,
-                    "h_pay_rate30":true,
-                    "material_lib_type":"1",
-                    "presale_discount_fee_text":"付定金立减20元",
-                    "presale_tail_end_time":1937297392332,
-                    "presale_tail_start_time":1937297392332,
-                    "presale_end_time":1937297392332,
-                    "presale_start_time":1937297392332,
-                    "presale_deposit":"100",
-                    "ju_play_end_time":1937297392332,
-                    "ju_play_start_time":1937297392332,
-                    "play_info":"玩法",
-                    "tmall_play_activity_end_time":1937297392332,
-                    "tmall_play_activity_start_time":1937297392332,
-                    "reserve_price":"102.00",
-                    "zk_final_price":"88.00",
-                    "nick":"xx旗舰店",
-                    "white_image":"https:\/\/img.alicdn.com\/bao\/uploaded\/TB1De0xk4n1gK0jSZKPXXXvUXXa.png",
-                    "short_title":"巴布豆菠萝超薄干爽拉拉裤xl60+6",
-                    "quantity":"10",
-                    "commission_rate":1550,
-                    "coupon_id":"d62db1ab8d9546b1bf0ff49bda5fc33b",
-                    "coupon_start_time":"2017-10-29",
-                    "coupon_end_time":"2017-10-29",
-                    "coupon_info":"满299元减20元",
-                    "coupon_amount":"10.00",
-                    "coupon_start_fee":"29.00",
-                    "coupon_remain_count":"111",
-                    "coupon_total_count":"22323",
-                    "sale_price":"168",
-                    "kuadian_promotion_info":"[\"每100减20\",\"每200减50\"]",
-                    "superior_brand":"1",
-                    "hot_flag":"1",
-                    "topn_info":{
-                        "topn_quantity":3000,
-                        "topn_total_count":3000,
-                        "topn_end_time":"1937297392332",
-                        "topn_start_time":"1937297392332",
-                        "topn_rate":"30"
-                    },
-                    "input_item_id":"qeqscd1231-uqwenqe"
-                }
-            ]
-        }
-    }
-}
-```
-
-### 异常示例
-
-```json
-{
-	"error_response":{
-		"msg":"Remote service error",
-		"code":50,
-		"sub_msg":"非法参数",
-		"sub_code":"isv.invalid-parameter"
-	}
-}
-```
-
-### 错误码表
-
-| 错误码 | 错误描述 | 解决方案 |
-|--------|---------|---------|
-| 50001 | 无结果 | 更换商品查询 |
-| 40001 | 内部调用失败 | 稍后重试 |
-| 50002 | 调用频率过高 | 稍后重试 |
-| 2 | pid不正确 | 检查除pid之外的相关入参adzoneId和siteId |
-| 4 | adzoneId不存在 | 检查入参adzoneId |
-| 5 | pid校验出错 | 检查pid相关入参，稍后重试 |
-| 8 | 未找到对应pid，请检查输入是否正确 | 检查入参 |
-| isp.tbkapi-service-unavailable | 系统异常 | 请重试 |
 
 ---
 ##taobao.tbk.item.details.upgrade.get（淘宝客-公用-淘宝客商品详情查询升级版（详细版））
@@ -10932,9 +9840,11 @@ client.execute('taobao.tbk.item.details.get', {
 | 参数名称 | 类型 | 示例值 | 描述 |
 |---------|------|--------|------|
 | results | TbkItemDetail [] |  | 仅淘宝客商品，字段值根据API赋权等级输出 |
-| └ sku_list | TbkItemDetailSku
+| └ sku_list | TbkItemDetailSku
+
                                  [] |  | 商品sku信息 |
-| └ property_list | TbkItemDetailSkuProp
+| └ property_list | TbkItemDetailSkuProp
+
                                  [] |  | sku属性 |
 | └ value_text | String | 藏青色 | 属性值名称 |
 | └ value_id | Number | 28866 | 属性值ID |
@@ -10946,7 +9856,8 @@ client.execute('taobao.tbk.item.details.get', {
 | └ sku_price_promotion_info | SkuPricePromotionInfo | {} | SKU价格促销信息 |
 | └ sku_zk_final_price | String | 88.00 | 促销信息-销售价格，无促销时等于一口价，有促销时为促销价。若属于预售商品，付定金时间内，在线售卖价=预售价 |
 | └ sku_final_promotion_price | String | 69.9 | 促销信息-预估到手价(元)。若属于预售商品，付定金时间内，预估到手价价=定金+尾款的预估到手价 |
-| └ sku_final_promotion_path_list | SkuFinalPromotionPathMapData
+| └ sku_final_promotion_path_list | SkuFinalPromotionPathMapData
+
                                  [] |  | SKU到手价优惠路径列表 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -10971,7 +9882,8 @@ client.execute('taobao.tbk.item.details.get', {
 | └ reserve_price | String | 102.00 | 商品一口价格 |
 | └ zk_final_price | String | 88.00 | 折扣价（元） 若属于预售商品，付定金时间内，折扣价=预售价 |
 | └ final_promotion_price | String | 69.9 | 促销信息-预估到手价(元)。若属于预售商品，付定金时间内，预估到手价=预售尾款预估到手价 |
-| └ final_promotion_path_list | FinalPromotionPathMapData
+| └ final_promotion_path_list | FinalPromotionPathMapData
+
                                  [] |  | 优惠促销列表 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -10979,12 +9891,14 @@ client.execute('taobao.tbk.item.details.get', {
 | └ promotion_start_time | String | 2019-11-10 21:59:59 | 优惠开始时间 |
 | └ promotion_end_time | String | 2019-11-10 21:59:59 | 优惠结束时间 |
 | └ promotion_id | String | XX | 优惠ID |
-| └ promotion_tag_list | PromotionTagMapData
+| └ promotion_tag_list | PromotionTagMapData
+
                                  [] |  | 标签信息列表 |
 | └ tag_name | String | 88VIP | 标签名称，如“88VIP”、“花呗免息”、“猫超买返”、“是否包邮” |
 | └ predict_rounding_up_price | String | 56.1 | 促销信息-预估凑单价（元）。预估凑单叠加优惠后的商品单价 |
 | └ predict_rounding_up_price_desc | String | 需买1件 | 促销信息-凑单价说明，描述凑单价的实现说明。如 “可凑单”或“需买X件” |
-| └ more_promotion_list | MorePromotionMapData
+| └ more_promotion_list | MorePromotionMapData
+
                                  [] |  | 更多活动优惠 |
 | └ promotion_title | String | 满件折 | 预热优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 2件9折 | 预热优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -10993,10 +9907,12 @@ client.execute('taobao.tbk.item.details.get', {
 | └ promotion_id | String | XX | 优惠ID |
 | └ promotion_total_count | Number | 1000 | 当天优惠总库存【指定优惠透出，不对外开放指定优惠透出，不对外开放】 |
 | └ promotion_url | String | https:// | 优惠使用路径【指定优惠透出，不对外开放】 |
-| └ activity_tag_list | ActivityTagMapData
+| └ activity_tag_list | ActivityTagMapData
+
                                  [] |  | 货品展示标识列表 |
 | └ tag_name | String | 淘宝好价节 | 货品展示标识，展示在商品标题前的商品活动标 |
-| └ multiple_items_coupon_list | MultiItemPromotionMapData
+| └ multiple_items_coupon_list | MultiItemPromotionMapData
+
                                  [] |  | 多件价券信息 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -11013,9 +9929,11 @@ client.execute('taobao.tbk.item.details.get', {
 | └ min_rebate | Number | 1 | 最低优惠比例（%），入参具体IP时，仅展示该IP最低优惠比例。 |
 | └ max_discount | Number | 1 | 最高优惠金额（分，如1500代表1500分 = 15 元），入参具体IP时，仅展示该IP最高优惠金额 |
 | └ min_discount | Number | 1 | 最低优惠金额（分，如1500代表1500分 = 15 元），入参具体IP时，仅展示该IP最低优惠金额。 |
-| └ province_list | String
+| └ province_list | String
+
                                  [] |  | 国补生效区域（省份）。不入参IP时展示各可用省份；入参IP时，全国可用商品展示各可用省份，区域可用商品仅展示IP对应省份。 |
-| └ future_activity_promotion_path_list | PreheatPromotionMapData
+| └ future_activity_promotion_path_list | PreheatPromotionMapData
+
                                  [] |  | 预热价格信息 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -11029,7 +9947,8 @@ client.execute('taobao.tbk.item.details.get', {
 | └ short_title | String | 巴布豆菠萝超薄干爽拉拉裤xl60+6 | 商品信息-商品短标题 |
 | └ pict_url | String | http://gi4.md.alicdn.com/bao/uploaded/i4/xxx.jpg | 商品主图 |
 | └ white_image | String | https://img.alicdn.com/bao/uploaded/TB1De0xk4n1gK0jSZKPXXXvUXXa.png | 商品信息-商品白底图 |
-| └ small_images | String
+| └ small_images | String
+
                                  [] |  | 商品小图列表 |
 | └ level_one_category_name | String | 女装 | 一级类目名称 |
 | └ category_name | String | 情趣内衣 | 叶子类目名称 |
@@ -11048,11 +9967,13 @@ client.execute('taobao.tbk.item.details.get', {
 | └ is_prepay | Boolean | true | 是否加入消费者保障 |
 | └ superior_brand | String | 1 | 是否品牌精选，0不是，1是 |
 | └ material_lib_type | String | 1 | 商品库类型，支持多库类型输出，以英文逗号分隔“,”分隔，1:营销商品主推库，2. 内容商品库，如果值为空则不属于1，2这两种商品类型 |
-| └ property_image_list | TbkItemDetailPropImg
+| └ property_image_list | TbkItemDetailPropImg
+
                                  [] |  | 商品属性图片信息 |
 | └ image_url | String | https://img.alicdn.com/bao/uploaded/i4/33283/O1CN01JMY9uO1a7enNCmCEP_!!33283.jpg | 属性图片主图地址 |
 | └ properties | String | 1627207:6733755172（颜色分类--棉柔巾100抽(绿)） | 属性ID串 |
-| └ property_list | TbkItemDetailProp
+| └ property_list | TbkItemDetailProp
+
                                  [] |  | 商品属性信息 |
 | └ value_text | String | 36 | 属性值名称 |
 | └ value_id | Number | 671 | 属性值ID |
@@ -11370,7 +10291,8 @@ client.execute('taobao.tbk.item.details.upgrade.get', {
 | └ reserve_price | String | 102.00 | 商品一口价格 |
 | └ zk_final_price | String | 88.00 | 折扣价（元） 若属于预售商品，付定金时间内，折扣价=预售价 |
 | └ final_promotion_price | String | 69.9 | 促销信息-预估到手价(元)。若属于预售商品，付定金时间内，预估到手价=预售尾款预估到手价 |
-| └ final_promotion_path_list | FinalPromotionPathMapData
+| └ final_promotion_path_list | FinalPromotionPathMapData
+
                                  [] |  | 优惠促销列表 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -11378,12 +10300,14 @@ client.execute('taobao.tbk.item.details.upgrade.get', {
 | └ promotion_start_time | String | 2019-11-10 21:59:59 | 优惠开始时间 |
 | └ promotion_end_time | String | 2019-11-10 21:59:59 | 优惠结束时间 |
 | └ promotion_id | String | XX | 优惠ID |
-| └ promotion_tag_list | PromotionTagMapData
+| └ promotion_tag_list | PromotionTagMapData
+
                                  [] |  | 标签信息列表 |
 | └ tag_name | String | 88VIP | 标签名称，如“88VIP”、“花呗免息”、“猫超买返”、“是否包邮” |
 | └ predict_rounding_up_price | String | 56.1 | 促销信息-预估凑单价（元）。预估凑单叠加优惠后的商品单价 |
 | └ predict_rounding_up_price_desc | String | 需买1件 | 促销信息-凑单价说明，描述凑单价的实现说明。如 “可凑单”或“需买X件” |
-| └ more_promotion_list | MorePromotionMapData
+| └ more_promotion_list | MorePromotionMapData
+
                                  [] |  | 更多活动优惠 |
 | └ promotion_title | String | 满件折 | 预热优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 2件9折 | 预热优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -11392,7 +10316,8 @@ client.execute('taobao.tbk.item.details.upgrade.get', {
 | └ promotion_id | String | XX | 优惠ID |
 | └ promotion_total_count | Number | 1000 | 当天优惠总库存【指定优惠透出，不对外开放】 |
 | └ promotion_url | String | https:// | 优惠使用路径【指定优惠透出，不对外开放】 |
-| └ activity_tag_list | ActivityTagMapData
+| └ activity_tag_list | ActivityTagMapData
+
                                  [] |  | 货品展示标识列表 |
 | └ tag_name | String | 淘宝好价节 | 货品展示标识，展示在商品标题前的商品活动标 |
 | └ gov_subsidy | GovSubsidyDTO |  | 国家补贴 |
@@ -11402,10 +10327,12 @@ client.execute('taobao.tbk.item.details.upgrade.get', {
 | └ min_rebate | Number | 1 | 最低优惠比例（%），入参具体IP时，仅展示该IP最低优惠比例。 |
 | └ max_discount | String | 15.00 | 最高优惠金额（元，如15代表15 元），入参具体IP时，仅展示该IP最高优惠金额 |
 | └ min_discount | String | 15.00 | 最低优惠金额（元，如15代表15 元），入参具体IP时，仅展示该IP最低优惠金额 |
-| └ province_list | String
+| └ province_list | String
+
                                  [] |  | 国补生效区域（省份）。不入参IP时展示各可用省份；入参IP时，全国可用商品展示各可用省份，区域可用商品仅展示IP对应省份。 |
 | └ future_activity_promotion_price | String | 56.1 | 预热预估到手价（元） |
-| └ future_activity_promotion_path_list | String
+| └ future_activity_promotion_path_list | String
+
                                  [] |  | 预热预估到手价信息 |
 | └ promotion_title | String | 商品券 | 优惠名称，如“商品券”、“跨店满减”、“单品直降”等 |
 | └ promotion_desc | String | 满7999减1300 | 预热优惠利益点文案，如“1件7.92折”、“每200减20”等 |
@@ -11416,7 +10343,8 @@ client.execute('taobao.tbk.item.details.upgrade.get', {
 | └ item_basic_info | BasicMapData |  | 商品基本信息 |
 | └ title | String | 连衣裙 | 商品标题 |
 | └ pict_url | String | http://gi4.md.alicdn.com/bao/uploaded/i4/xxx.jpg | 商品主图 |
-| └ small_images | String
+| └ small_images | String
+
                                  [] |  | 商品小图列表 |
 | └ level_one_category_name | String | 女装 | 一级类目名称 |
 | └ category_name | String | 情趣内衣 | 叶子类目名称 |
@@ -11715,5 +10643,3 @@ client.execute('taobao.tbk.itemid.ineffective.transform', {
 	}
 }
 ```
-
-
